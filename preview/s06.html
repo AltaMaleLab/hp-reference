@@ -214,6 +214,35 @@
   height: 1px;
   background: #1F1F1F;
 }
+
+/* --- Les 5 territoires du Journal (16.10.2026) ---------------
+   Ligne discrète sous le titre ; les cartes affichent le territoire
+   de chaque article (rubriques WordPress du Journal). */
+.alta-idx__head {
+  margin-bottom: 28px;
+}
+.alta-idx__terr {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.alta-idx__terr-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  text-decoration: none;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .alta-idx__terr {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 16px;
+  }
+}
 </style>
 
 <section class="alta-idx">
@@ -231,13 +260,23 @@
       </a>
     </div>
 
+    <!-- The five territories of the Journal (16.10.2026).
+         Liens provisoires vers les rubriques du Journal. -->
+    <nav class="alta-idx__terr" aria-label="Journal territories">
+      <a href="#metabolic-health" class="alta-idx__terr-link">Metabolic Health</a>
+      <a href="#strength-movement" class="alta-idx__terr-link">Strength &amp; Movement</a>
+      <a href="#mind-consciousness" class="alta-idx__terr-link">Mind &amp; Consciousness</a>
+      <a href="#nervous-system-energy" class="alta-idx__terr-link">Nervous System &amp; Energy</a>
+      <a href="#masculinity-life" class="alta-idx__terr-link">Masculinity &amp; Life</a>
+    </nav>
+
     <!-- 3×2 article grid -->
     <div class="alta-idx__grid">
 
       <!-- N° 12 -->
       <a href="#article-12" class="alta-idx__card">
         <div class="alta-idx__card-num">N° 12</div>
-        <div class="alta-idx__card-pillar">Metabolic Intelligence</div>
+        <div class="alta-idx__card-pillar">Metabolic Health</div>
         <h3 class="alta-idx__card-title">After 40, your face doesn't lie anymore.</h3>
         <div class="alta-idx__card-meta">18.05.2026 · 7 min</div>
       </a>
@@ -245,7 +284,7 @@
       <!-- N° 11 -->
       <a href="#article-11" class="alta-idx__card">
         <div class="alta-idx__card-num">N° 11</div>
-        <div class="alta-idx__card-pillar">Strength &amp; Muscles</div>
+        <div class="alta-idx__card-pillar">Strength &amp; Movement</div>
         <h3 class="alta-idx__card-title">Your internal pharmacy — the molecules muscle makes.</h3>
         <div class="alta-idx__card-meta">14.04.2026 · 9 min</div>
       </a>
@@ -253,7 +292,7 @@
       <!-- N° 10 -->
       <a href="#article-10" class="alta-idx__card">
         <div class="alta-idx__card-num">N° 10</div>
-        <div class="alta-idx__card-pillar">Cross-pillar</div>
+        <div class="alta-idx__card-pillar">Masculinity &amp; Life</div>
         <h3 class="alta-idx__card-title">The Long Game starts at 40.</h3>
         <div class="alta-idx__card-meta">26.03.2026 · 12 min</div>
       </a>
@@ -261,7 +300,7 @@
       <!-- N° 09 -->
       <a href="#article-09" class="alta-idx__card">
         <div class="alta-idx__card-num">N° 09</div>
-        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <div class="alta-idx__card-pillar">Masculinity &amp; Life</div>
         <h3 class="alta-idx__card-title">Why you hate the word "coaching".</h3>
         <div class="alta-idx__card-meta">12.03.2026 · 6 min</div>
       </a>
@@ -269,7 +308,7 @@
       <!-- N° 08 -->
       <a href="#article-08" class="alta-idx__card">
         <div class="alta-idx__card-num">N° 08</div>
-        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <div class="alta-idx__card-pillar">Nervous System &amp; Energy</div>
         <h3 class="alta-idx__card-title">You're moving too fast. Your body already knows.</h3>
         <div class="alta-idx__card-meta">26.02.2026 · 11 min</div>
       </a>
@@ -277,7 +316,7 @@
       <!-- N° 07 -->
       <a href="#article-07" class="alta-idx__card">
         <div class="alta-idx__card-num">N° 07</div>
-        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <div class="alta-idx__card-pillar">Mind &amp; Consciousness</div>
         <h3 class="alta-idx__card-title">Antifragility — the principle that changes everything.</h3>
         <div class="alta-idx__card-meta">12.02.2026 · 8 min</div>
       </a>
