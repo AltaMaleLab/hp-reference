@@ -221,6 +221,22 @@
     font-size: 0.75rem;
     letter-spacing: 0.12em;
   }
+  /* Correctif 16.10.2026 : en mobile, la photo est recadrée et le
+     ciel clair passe derrière le texte. Le voile devient vertical et
+     plus dense sous le texte pour garder la lecture. Le retour à la
+     ligne forcé du sous-titre est retiré (césure naturelle). */
+  .alta-hero__veil {
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.65) 32%,
+      rgba(0,0,0,0.86) 55%,
+      rgba(0,0,0,0.92) 100%
+    );
+  }
+  .alta-hero__deck br {
+    display: none;
+  }
 }
 </style>
 
