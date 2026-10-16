@@ -199,10 +199,16 @@
   line-height: 1;
 }
 
+/* Le nom est un seul bloc : l'espace autour de l'étoile ne dépend plus
+   du gap du flex (correctif 16.10.2026, aligné sur le logo de référence). */
+.alta-ft__name {
+  white-space: nowrap;
+}
 .alta-ft__star {
-  font-size: 0.5em;
-  vertical-align: 0.32em;
-  margin: 0 0.1em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.6em;
+  vertical-align: 0.2em;
+  margin: 0 0.5em;
   display: inline-block;
   line-height: 1;
   color: #C8B568;
@@ -348,7 +354,7 @@
       <div class="alta-ft__brand">
         <div class="alta-ft__wordmark">
           <span class="alta-ft__glyph">△</span>
-          ALTA <span class="alta-ft__star">★</span> MALE LAB
+          <span class="alta-ft__name">ALTA<span class="alta-ft__star">★</span>MALE LAB</span>
         </div>
         <div class="alta-ft__tagline">The Long Game for Men 40+</div>
       </div>
