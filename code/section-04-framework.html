@@ -1,0 +1,218 @@
+<!-- ============================================================
+     ALTA MALE LAB — Section 4: The Alta Framework
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-fw *,
+.alta-fw *::before,
+.alta-fw *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-fw {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-fw__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Section header ------------------------------------------- */
+.alta-fw__head {
+  margin-bottom: 20px;
+}
+
+.alta-fw__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.alta-fw__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  max-width: 560px;
+  text-wrap: balance;
+}
+
+/* --- Three-column pillar grid --------------------------------- */
+.alta-fw__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #1F1F1F;
+  margin-top: 16px;
+}
+
+.alta-fw__col {
+  padding: 40px 28px;
+  border-right: 1px solid #1F1F1F;
+}
+
+.alta-fw__col:last-child {
+  border-right: none;
+}
+
+/* --- Pillar number -------------------------------------------- */
+.alta-fw__num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  color: #8A8A8A;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+
+/* --- Pillar title --------------------------------------------- */
+.alta-fw__h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #EDEDED;
+  margin-bottom: 14px;
+  text-wrap: balance;
+}
+
+/* --- Pillar body ---------------------------------------------- */
+.alta-fw__p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #B8B8B8;
+}
+
+/* --- Micro-signature ------------------------------------------ */
+.alta-fw__sig {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #8A8A8A;
+  margin-top: 18px;
+}
+
+/* --- Footer CTA ----------------------------------------------- */
+.alta-fw__cta-row {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.alta-fw__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  color: #B8B8B8;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.alta-fw__arr {
+  color: #8A8A8A;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 640px) {
+  .alta-fw__grid {
+    grid-template-columns: 1fr;
+  }
+  .alta-fw__col {
+    border-right: none;
+    border-bottom: 1px solid #1F1F1F;
+    padding: 36px 0;
+  }
+  .alta-fw__col:last-child {
+    border-bottom: none;
+  }
+}
+</style>
+
+<section class="alta-fw">
+  <div class="alta-fw__inner">
+
+    <!-- Section header -->
+    <div class="alta-fw__head">
+      <span class="alta-fw__eyebrow">The Alta Framework</span>
+      <h2 class="alta-fw__title">A biological approach to masculine longevity.</h2>
+    </div>
+
+    <!-- Pillar grid -->
+    <div class="alta-fw__grid">
+
+      <!-- 01 — Metabolic Intelligence -->
+      <div class="alta-fw__col">
+        <div class="alta-fw__num">01</div>
+        <h3 class="alta-fw__h3">Metabolic Intelligence</h3>
+        <p class="alta-fw__p">Energy is biology. Understanding metabolism is the foundation of long-term vitality.</p>
+        <p class="alta-fw__sig">Energy stability determines everything.</p>
+      </div>
+
+      <!-- 02 — Strength & Muscles -->
+      <div class="alta-fw__col">
+        <div class="alta-fw__num">02</div>
+        <h3 class="alta-fw__h3">Strength &amp; Muscles</h3>
+        <p class="alta-fw__p">Muscle is life insurance. After 40, strength becomes structural.</p>
+        <p class="alta-fw__sig">Muscle protects the system.</p>
+      </div>
+
+      <!-- 03 — Mind & Nervous System -->
+      <div class="alta-fw__col">
+        <div class="alta-fw__num">03</div>
+        <h3 class="alta-fw__h3">Mind &amp; Nervous System</h3>
+        <p class="alta-fw__p">The nervous system determines the pace of aging. Stability becomes the new performance.</p>
+        <p class="alta-fw__sig">Regulation creates longevity.</p>
+      </div>
+
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="alta-fw__cta-row">
+      <a href="#framework" class="alta-fw__cta">
+        Explore the Framework
+        <span class="alta-fw__arr">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>

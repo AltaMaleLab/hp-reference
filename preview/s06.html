@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preview S06</title>
+<style>html,body{margin:0;padding:0;background:#000000;}</style>
+</head><body>
+<!-- Simulates the Divi section: black background, padding 0, one Code Module containing the file below, unchanged. -->
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 6: Latest Articles
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     3. Update href values on each .alta-idx__card to point
+        to your live article URLs.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-idx *,
+.alta-idx *::before,
+.alta-idx *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-idx {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-idx__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Section header row --------------------------------------- */
+.alta-idx__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.alta-idx__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.alta-idx__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  max-width: 480px;
+  text-wrap: balance;
+}
+
+/* Quiet CTA — top right of header */
+.alta-idx__all {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.alta-idx__all-arr {
+  color: #8A8A8A;
+}
+
+/* --- 3×2 grid ------------------------------------------------- */
+.alta-idx__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #1F1F1F;
+}
+
+/* --- Individual card ------------------------------------------ */
+.alta-idx__card {
+  padding: 32px 24px;
+  border-right: 1px solid #1F1F1F;
+  border-bottom: 1px solid #1F1F1F;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Remove right border on every 3rd card */
+.alta-idx__card:nth-child(3n) {
+  border-right: none;
+}
+
+/* Remove bottom border on last row */
+.alta-idx__card:nth-child(4),
+.alta-idx__card:nth-child(5),
+.alta-idx__card:nth-child(6) {
+  border-bottom: none;
+}
+
+/* --- Card elements -------------------------------------------- */
+.alta-idx__card-num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #8A8A8A;
+  line-height: 1;
+}
+
+.alta-idx__card-pillar {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  line-height: 1;
+}
+
+.alta-idx__card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #EDEDED;
+  text-wrap: balance;
+  flex: 1;
+}
+
+.alta-idx__card-meta {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #8A8A8A;
+  margin-top: auto;
+  line-height: 1;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 640px) {
+  .alta-idx__grid {
+    grid-template-columns: 1fr;
+  }
+  .alta-idx__card {
+    border-right: none;
+    border-bottom: 1px solid #1F1F1F;
+    padding: 28px 0;
+  }
+  .alta-idx__card:last-child {
+    border-bottom: none;
+  }
+  /* Reset the nth-child overrides for single column */
+  .alta-idx__card:nth-child(4),
+  .alta-idx__card:nth-child(5),
+  .alta-idx__card:nth-child(6) {
+    border-bottom: 1px solid #1F1F1F;
+  }
+  .alta-idx__card:nth-child(6) {
+    border-bottom: none;
+  }
+}
+</style>
+
+<section class="alta-idx">
+  <div class="alta-idx__inner">
+
+    <!-- Section header -->
+    <div class="alta-idx__head">
+      <div>
+        <span class="alta-idx__eyebrow">The Journal</span>
+        <h2 class="alta-idx__title">Latest dispatches.<br>Read for the second half of life.</h2>
+      </div>
+      <a href="#journal" class="alta-idx__all">
+        All issues
+        <span class="alta-idx__all-arr">→</span>
+      </a>
+    </div>
+
+    <!-- 3×2 article grid -->
+    <div class="alta-idx__grid">
+
+      <!-- N° 12 -->
+      <a href="#article-12" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 12</div>
+        <div class="alta-idx__card-pillar">Metabolic Intelligence</div>
+        <h3 class="alta-idx__card-title">After 40, your face doesn't lie anymore.</h3>
+        <div class="alta-idx__card-meta">18.05.2026 · 7 min</div>
+      </a>
+
+      <!-- N° 11 -->
+      <a href="#article-11" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 11</div>
+        <div class="alta-idx__card-pillar">Strength &amp; Muscles</div>
+        <h3 class="alta-idx__card-title">Your internal pharmacy — the molecules muscle makes.</h3>
+        <div class="alta-idx__card-meta">14.04.2026 · 9 min</div>
+      </a>
+
+      <!-- N° 10 -->
+      <a href="#article-10" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 10</div>
+        <div class="alta-idx__card-pillar">Cross-pillar</div>
+        <h3 class="alta-idx__card-title">The Long Game starts at 40.</h3>
+        <div class="alta-idx__card-meta">26.03.2026 · 12 min</div>
+      </a>
+
+      <!-- N° 09 -->
+      <a href="#article-09" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 09</div>
+        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <h3 class="alta-idx__card-title">Why you hate the word "coaching".</h3>
+        <div class="alta-idx__card-meta">12.03.2026 · 6 min</div>
+      </a>
+
+      <!-- N° 08 -->
+      <a href="#article-08" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 08</div>
+        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <h3 class="alta-idx__card-title">You're moving too fast. Your body already knows.</h3>
+        <div class="alta-idx__card-meta">26.02.2026 · 11 min</div>
+      </a>
+
+      <!-- N° 07 -->
+      <a href="#article-07" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 07</div>
+        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <h3 class="alta-idx__card-title">Antifragility — the principle that changes everything.</h3>
+        <div class="alta-idx__card-meta">12.02.2026 · 8 min</div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</div>
+</body></html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preview S05</title>
+<style>html,body{margin:0;padding:0;background:#000000;}</style>
+</head><body>
+<!-- Simulates the Divi section: black background, padding 0, one Code Module containing the file below, unchanged. -->
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 5: Featured Article
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     3. To add the editorial photograph, replace the
+        .alta-feat__image-slot div with an <img> tag,
+        or set a background-image on .alta-feat__image.
+        Apply filter: grayscale(1) contrast(1.04) to keep
+        it in the B&W editorial register.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-feat *,
+.alta-feat *::before,
+.alta-feat *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-feat {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-feat__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Card: two columns --------------------------------------- */
+.alta-feat__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #1F1F1F;
+  border-bottom: 1px solid #1F1F1F;
+  min-height: 480px;
+}
+
+/* --- Left: image slot ----------------------------------------- */
+.alta-feat__image {
+  background: #0A0A0A;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #1F1F1F;
+  min-height: 380px;
+}
+
+.alta-feat__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(1) contrast(1.04);
+}
+
+.alta-feat__image-slot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #5A5A5A;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+/* --- Right: text --------------------------------------------- */
+.alta-feat__text {
+  padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* --- Eyebrow -------------------------------------------------- */
+.alta-feat__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  line-height: 1;
+}
+
+/* --- Title ---------------------------------------------------- */
+.alta-feat__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3vw, 2.375rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  text-wrap: balance;
+}
+
+/* --- Deck ----------------------------------------------------- */
+.alta-feat__deck {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #B8B8B8;
+}
+
+/* --- CTA ------------------------------------------------------ */
+.alta-feat__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  line-height: 1;
+  align-self: flex-start;
+}
+
+.alta-feat__arr {
+  color: #C8B568;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 640px) {
+  .alta-feat__card {
+    grid-template-columns: 1fr;
+  }
+  .alta-feat__image {
+    min-height: 260px;
+    border-right: none;
+    border-bottom: 1px solid #1F1F1F;
+  }
+  .alta-feat__text {
+    padding: 40px 0;
+  }
+}
+</style>
+
+<section class="alta-feat">
+  <div class="alta-feat__inner">
+    <div class="alta-feat__card">
+
+      <!-- Image slot — replace with <img> when photo is available -->
+      <div class="alta-feat__image">
+        <div class="alta-feat__image-slot">
+          B&amp;W editorial portrait<br>— image slot —
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="alta-feat__text">
+        <div class="alta-feat__eyebrow">Featured Article</div>
+        <h2 class="alta-feat__h2">Muscle is your life insurance.</h2>
+        <p class="alta-feat__deck">
+          Why strength becomes one of the most important predictors
+          of longevity after 40 — and why every other system in the
+          body depends on it.
+        </p>
+        <a href="#article" class="alta-feat__cta">
+          Read Article
+          <span class="alta-feat__arr">→</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+</body></html>

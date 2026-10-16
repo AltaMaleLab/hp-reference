@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preview S10</title>
+<style>html,body{margin:0;padding:0;background:#000000;}</style>
+</head><body>
+<!-- Simulates the Divi section: black background, padding 0, one Code Module containing the file below, unchanged. -->
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 10: Newsletter + Footer
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own spacing throughout.
+     3. Wire the form action on .alta-nl__form to your
+        email service provider (Mailchimp, ConvertKit, etc).
+     4. The △ glyph in the footer wordmark is a plain Unicode
+        character — no image dependency.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-nl *,
+.alta-nl *::before,
+.alta-nl *::after,
+.alta-ft *,
+.alta-ft *::before,
+.alta-ft *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   NEWSLETTER
+   ============================================================ */
+
+.alta-nl {
+  background: #000000;
+  padding: 120px 24px;
+  border-top: 1px solid #1F1F1F;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alta-nl__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Newsletter card: two columns ----------------------------- */
+.alta-nl__card {
+  border: 1px solid #1F1F1F;
+  padding: 64px 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* --- Left: editorial copy ------------------------------------- */
+.alta-nl__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  display: block;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+
+.alta-nl__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+
+.alta-nl__p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #B8B8B8;
+}
+
+/* --- Right: form ---------------------------------------------- */
+.alta-nl__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alta-nl__row {
+  display: flex;
+}
+
+.alta-nl__input {
+  flex: 1;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: #EDEDED;
+  background: transparent;
+  border: 1px solid #2A2A2A;
+  border-right: none;
+  padding: 15px 18px;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.alta-nl__input::placeholder {
+  color: #5A5A5A;
+}
+
+.alta-nl__btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  border-radius: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-appearance: none;
+}
+
+.alta-nl__help {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: #8A8A8A;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.alta-ft {
+  background: #0A0A0A;
+  border-top: 1px solid #1F1F1F;
+  padding: 80px 24px 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alta-ft__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Four-column grid ----------------------------------------- */
+.alta-ft__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- Brand column --------------------------------------------- */
+.alta-ft__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alta-ft__wordmark {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: #C8B568;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* △ glyph — Unicode, no image dependency */
+.alta-ft__glyph {
+  font-size: 18px;
+  color: #C8B568;
+  line-height: 1;
+}
+
+.alta-ft__star {
+  font-size: 0.5em;
+  vertical-align: 0.32em;
+  margin: 0 0.1em;
+  display: inline-block;
+  line-height: 1;
+  color: #C8B568;
+}
+
+.alta-ft__tagline {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  color: #B8B8B8;
+  line-height: 1.5;
+}
+
+/* --- Link columns --------------------------------------------- */
+.alta-ft__col-head {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  margin-bottom: 18px;
+  display: block;
+  line-height: 1;
+}
+
+.alta-ft__link {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #B8B8B8;
+  text-decoration: none;
+  padding: 4px 0;
+  line-height: 1.4;
+}
+
+/* --- Fine print bar ------------------------------------------- */
+.alta-ft__fine {
+  margin-top: 64px;
+  padding: 24px 0 32px;
+  border-top: 1px solid #1F1F1F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.alta-ft__copyright {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: #5A5A5A;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.alta-ft__closer {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  line-height: 1;
+}
+
+/* --- Responsive ----------------------------------------------- */
+/* --- Correctif 16.10.2026 : en mobile, le champ email et le bouton
+   Join dépassaient de la carte de 16 px. min-width: 0 les laisse
+   rétrécir dans la largeur disponible. ----------------------------- */
+.alta-nl__form,
+.alta-nl__input {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .alta-nl__card {
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+    gap: 36px;
+  }
+  .alta-ft__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .alta-ft__brand {
+    grid-column: 1 / -1;
+  }
+  .alta-ft__fine {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+</style>
+
+<!-- ── NEWSLETTER ─────────────────────────────────────────── -->
+<section class="alta-nl">
+  <div class="alta-nl__inner">
+    <div class="alta-nl__card">
+
+      <!-- Left: editorial copy -->
+      <div>
+        <span class="alta-nl__eyebrow">Join the Alta Circle</span>
+        <h2 class="alta-nl__h2">One letter, every other Sunday.</h2>
+        <p class="alta-nl__p">
+          The Long Game, written long. A piece of editorial each fortnight —
+          nothing about hacks, nothing about performance. Just the second half
+          of life, taken seriously.
+        </p>
+      </div>
+
+      <!-- Right: form -->
+      <div class="alta-nl__form">
+        <form class="alta-nl__row" action="#" method="post">
+          <input
+            class="alta-nl__input"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          >
+          <button class="alta-nl__btn" type="submit">Join</button>
+        </form>
+        <p class="alta-nl__help">
+          No advertising. No referrals. Unsubscribe in one click —
+          and you will not be chased.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="alta-ft">
+  <div class="alta-ft__inner">
+
+    <!-- Four-column grid -->
+    <div class="alta-ft__grid">
+
+      <!-- Col 1: Brand -->
+      <div class="alta-ft__brand">
+        <div class="alta-ft__wordmark">
+          <span class="alta-ft__glyph">△</span>
+          ALTA <span class="alta-ft__star">★</span> MALE LAB
+        </div>
+        <div class="alta-ft__tagline">The Long Game for Men 40+</div>
+      </div>
+
+      <!-- Col 2: Journal -->
+      <div>
+        <span class="alta-ft__col-head">Journal</span>
+        <a href="#" class="alta-ft__link">Metabolic Health</a>
+        <a href="#" class="alta-ft__link">Strength &amp; Movement</a>
+        <a href="#" class="alta-ft__link">Mind &amp; Consciousness</a>
+        <a href="#" class="alta-ft__link">Nervous System &amp; Energy</a>
+        <a href="#" class="alta-ft__link">Masculinity &amp; Life</a>
+      </div>
+
+      <!-- Col 3: ALTA -->
+      <div>
+        <span class="alta-ft__col-head">Alta</span>
+        <a href="#" class="alta-ft__link">The Framework</a>
+        <a href="#" class="alta-ft__link">Manifesto</a>
+        <a href="#" class="alta-ft__link">Editorial line</a>
+        <a href="#" class="alta-ft__link">About</a>
+        <a href="#" class="alta-ft__link">Press</a>
+      </div>
+
+      <!-- Col 4: Connect -->
+      <div>
+        <span class="alta-ft__col-head">Connect</span>
+        <a href="#" class="alta-ft__link">Newsletter</a>
+        <a href="#" class="alta-ft__link">Academy</a>
+        <a href="#" class="alta-ft__link">LinkedIn</a>
+        <a href="#" class="alta-ft__link">RSS</a>
+        <a href="#" class="alta-ft__link">Contact</a>
+      </div>
+
+    </div>
+
+    <!-- Fine print -->
+    <div class="alta-ft__fine">
+      <div class="alta-ft__copyright">© Alta Male Media 2026 · ALTA MALE LAB</div>
+      <div class="alta-ft__closer">Play The Long Game.</div>
+    </div>
+
+  </div>
+</footer>
+
+</div>
+</body></html>

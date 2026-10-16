@@ -1,0 +1,116 @@
+<!-- ============================================================
+     ALTA MALE LAB — Section 2: Beyond Alpha
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-alpha *,
+.alta-alpha *::before,
+.alta-alpha *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-alpha {
+  background: #000000;
+  padding: 120px 24px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner content column (760px max) ------------------------- */
+.alta-alpha__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Title ---------------------------------------------------- */
+.alta-alpha__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: #EDEDED;
+  margin-bottom: 40px;
+  text-wrap: balance;
+}
+
+/* --- Body lines ----------------------------------------------- */
+.alta-alpha__body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+  line-height: 1.5;
+  color: #EDEDED;
+  margin-bottom: 56px;
+}
+
+.alta-alpha__body span {
+  display: block;
+}
+
+/* Highlight the final line */
+.alta-alpha__body span:last-child {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+/* --- CTA ------------------------------------------------------ */
+.alta-alpha__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.alta-alpha__arr {
+  color: #C8B568;
+}
+</style>
+
+<section class="alta-alpha">
+  <div class="alta-alpha__inner">
+
+    <h2 class="alta-alpha__h2">Beyond Alpha.</h2>
+
+    <p class="alta-alpha__body">
+      <span>We don't coach domination.</span>
+      <span>We don't sell noise.</span>
+      <span>We don't manufacture ego.</span>
+      <span>We build durable men.</span>
+    </p>
+
+    <a href="#long-game" class="alta-alpha__cta">
+      Enter the Long Game
+      <span class="alta-alpha__arr">→</span>
+    </a>
+
+  </div>
+</section>

@@ -1,0 +1,258 @@
+<!-- ============================================================
+     ALTA MALE LAB — Section 1: Hero
+     Divi Code Module — standalone block
+     VERSION 3 — 10.10.2026
+     (V2 = nouveau hook du 08.08.2026)
+
+     CHANGEMENTS V3 :
+     1. Fond transparent : .alta-hero n'a plus de background opaque.
+        La photo posée en Background Image de la section Divi
+        est maintenant visible. (Correctif suite au retour de
+        Laurent : le fond #000000 masquait la photo.)
+     2. Footer "Issue N° 12" aligné sur le contenu (padding gauche
+        48px, comme .alta-hero__inner).
+     3. Sous-titre (deck) : Poppins 400, MAJUSCULES, letter-spacing
+        0.2em (au lieu de Lato Light en minuscules).
+
+     SETUP NOTES :
+     1. Placer ce code dans un Code Module Divi, dans une Section
+        Fullwidth / Fullscreen. Mettre la couleur de fond de la
+        Section Divi sur #000000 (c'est elle qui fournit le noir,
+        plus ce bloc).
+     2. Photo B&W éditoriale : à poser en Background Image de la
+        Section Divi (Design → Background). Le voile dégradé
+        (.alta-hero__veil) garantit la lisibilité du texte.
+     3. Supprimer la ligne @import ci-dessous si Poppins + Lato
+        sont déjà chargées globalement dans le thème.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-hero *,
+.alta-hero *::before,
+.alta-hero *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell --------------------------------------------
+   V3 : background transparent — le noir et la photo viennent de
+   la Section Divi, pas de ce bloc.                                */
+.alta-hero {
+  position: relative;
+  background: transparent;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Gradient veil (left-to-transparent) ----------------------
+   Covers the left area so text is readable over a B&W photo.
+   Has no visual effect on a plain black background.               */
+.alta-hero__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.92) 0%,
+      rgba(0,0,0,0.78) 28%,
+      rgba(0,0,0,0.30) 55%,
+      rgba(0,0,0,0.00) 75%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.00) 60%,
+      rgba(0,0,0,0.55) 100%
+    );
+  pointer-events: none;
+}
+
+/* --- Content column ------------------------------------------- */
+.alta-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: auto;
+  width: 100%;
+  padding: 120px 48px 72px;
+}
+
+/* --- Eyebrow -------------------------------------------------- */
+.alta-hero__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  opacity: 0.75;
+  margin-bottom: 28px;
+  line-height: 1;
+  display: block;
+}
+
+/* --- Headline ------------------------------------------------- */
+.alta-hero__h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1.10;
+  letter-spacing: -0.015em;
+  margin-bottom: 20px;
+  max-width: 640px;
+  text-wrap: balance;
+}
+
+/* Each line of the hook on its own block */
+.alta-hero__h1 span {
+  display: block;
+}
+
+/* --- Deck / subtitle ----------------------------------------- */
+.alta-hero__deck {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.78rem, 1.3vw, 0.9rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* --- CTA row -------------------------------------------------- */
+.alta-hero__cta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Primary CTA — gold border, gold text */
+.alta-hero__btn-primary {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Quiet CTA — secondary text, arrow suffix */
+.alta-hero__btn-quiet {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  color: #B8B8B8;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.alta-hero__btn-quiet .alta-hero__arr {
+  color: #8A8A8A;
+}
+
+/* --- Footer bar -----------------------------------------------
+   V3 : padding gauche/droite 48px (identique à .alta-hero__inner)
+   pour que "Issue N° 12" s'aligne sur "Read the latest".           */
+.alta-hero__foot {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: auto;
+  width: 100%;
+  padding: 24px 48px 40px;
+  border-top: 1px solid #1F1F1F;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  line-height: 1;
+}
+
+.alta-hero__foot b {
+  color: #EDEDED;
+  font-weight: 500;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 768px) {
+  .alta-hero {
+    min-height: 100svh;
+    height: 100svh;
+  }
+  .alta-hero__inner {
+    padding: 80px 20px 56px;
+  }
+  .alta-hero__foot {
+    padding: 20px 20px 32px;
+  }
+  .alta-hero__deck {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+}
+</style>
+
+<section class="alta-hero">
+
+  <!-- Gradient veil (text readability over photo) -->
+  <div class="alta-hero__veil"></div>
+
+  <!-- Content -->
+  <div class="alta-hero__inner">
+    <span class="alta-hero__eyebrow">The Long Game for Men 40+</span>
+    <h1 class="alta-hero__h1">
+      <span>Don't Fight Your Body.</span>
+      <span>Learn Its Language.</span>
+      <span>Come Home to Yourself.</span>
+    </h1>
+    <p class="alta-hero__deck">
+      Evidence-based insights on metabolic health, strength,<br>
+      longevity and conscious masculinity for men 40+.
+    </p>
+    <div class="alta-hero__cta">
+      <a href="#journal" class="alta-hero__btn-primary">Read the latest</a>
+      <a href="#framework" class="alta-hero__btn-quiet">
+        The Alta Framework
+        <span class="alta-hero__arr">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Issue foot bar -->
+  <div class="alta-hero__foot">
+    Issue N°&nbsp;12 &nbsp;·&nbsp; <b>Out now</b> &nbsp;·&nbsp; 18.05.2026
+  </div>
+
+</section>

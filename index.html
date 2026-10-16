@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Homepage — Référence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000000; --bg-2:#0A0A0A; --line:#1F1F1F; --line-2:#2A2A2A;
+  --fg-1:#EDEDED; --fg-2:#B8B8B8; --fg-3:#8A8A8A; --fg-4:#5A5A5A; --gold:#C8B568;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;background:var(--bg);color:var(--fg-2);font-family:'Lato',sans-serif;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--fg-1)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;color:var(--fg-1);background:var(--bg-2);border:1px solid var(--line);padding:1px 6px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.wide{max-width:1240px;margin:0 auto;padding:0 16px}
+
+/* Masthead */
+.mast{border-bottom:1px solid var(--line);padding:28px 0}
+.mast .wide{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.mark{font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.mark span{font-size:10px;vertical-align:2px;margin:0 .5em}
+.ver{font-family:'Poppins',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-3)}
+
+/* Type */
+.eyebrow{font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--fg-3);display:block;margin-bottom:20px}
+h1{font-family:'Poppins',sans-serif;font-weight:600;color:var(--fg-1);font-size:clamp(2rem,4.4vw,3rem);line-height:1.1;letter-spacing:-.015em;margin:0 0 28px;text-wrap:balance}
+h2{font-family:'Poppins',sans-serif;font-weight:500;color:var(--fg-1);font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.2;margin:0 0 24px}
+h4{font-family:'Poppins',sans-serif;font-weight:500;color:var(--fg-1);font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin:0 0 14px}
+p{margin:0 0 18px}
+.lede{font-size:19px;color:var(--fg-1);font-weight:300}
+.block{padding:120px 0;border-bottom:1px solid var(--line)}
+.block--first{padding-top:96px}
+
+/* Rule box */
+.rule{border:1px solid var(--gold);padding:40px 36px;margin:8px 0 36px}
+.rule__h{font-family:'Poppins',sans-serif;font-weight:600;color:var(--fg-1);font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.3;margin:0 0 16px}
+.rule p:last-child{margin:0}
+.no{color:var(--fg-1)}
+
+/* Lists */
+ol.steps,ul.plain{padding:0;margin:0 0 24px;list-style:none;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 18px 44px}
+ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:2px;font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;letter-spacing:.14em;color:var(--gold)}
+ul.plain li{position:relative;padding:0 0 12px 22px}
+ul.plain li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--gold)}
+strong{color:var(--fg-1);font-weight:700}
+
+/* Settings table */
+.tbl{width:100%;border-collapse:collapse;margin:8px 0 28px;font-size:15px}
+.tbl th,.tbl td{text-align:left;vertical-align:top;padding:14px 12px 14px 0;border-top:1px solid var(--line)}
+.tbl th{font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3);width:150px}
+.tbl td{color:var(--fg-2)}
+
+/* Tokens */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;margin:8px 0 40px}
+.sw{border:1px solid var(--line)}
+.sw__c{height:64px;border-bottom:1px solid var(--line)}
+.sw__t{padding:10px 12px;font-size:13px;line-height:1.5}
+.sw__t b{display:block;color:var(--fg-1);font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;letter-spacing:.06em}
+.type-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
+.type-row .k{font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3)}
+
+/* TOC */
+.toc{list-style:none;padding:0;margin:0;columns:2;column-gap:32px}
+.toc li{break-inside:avoid;border-top:1px solid var(--line)}
+.toc a{display:flex;gap:16px;padding:12px 0;text-decoration:none;color:var(--fg-1);font-size:16px}
+.toc a span{font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;letter-spacing:.14em;color:var(--gold);padding-top:3px;min-width:28px}
+
+/* Sections */
+.sec{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec__head{display:flex;gap:24px;align-items:flex-start;margin-bottom:32px}
+.sec__num{font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:var(--gold);padding-top:8px;min-width:40px}
+.sec__title{font-family:'Poppins',sans-serif;font-weight:500;color:var(--fg-1);font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.25;margin:0 0 8px}
+.sec__file{font-size:14px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.tag{font-family:'Poppins',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg-3);border:1px solid var(--line-2);padding:4px 8px;line-height:1}
+.tag--live{color:var(--gold);border-color:#4a4426}
+.frame{margin:0 0 32px}
+.frame__label{font-family:'Poppins',sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--fg-3);margin-bottom:10px}
+.frame__box{position:relative;overflow:hidden;border:1px solid var(--line-2);background:#000}
+.frame__box iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;display:block;background:#000}
+.sec__row{display:grid;grid-template-columns:392px 1fr;gap:48px;align-items:start}
+.frame--mob{margin:0}
+.side__list{list-style:none;padding:0;margin:0 0 28px}
+.side__list li{position:relative;padding:0 0 12px 22px;font-size:16px}
+.side__list li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--gold)}
+.side__actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.btn{font-family:'Poppins',sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:14px 22px;background:transparent;color:var(--gold);border:1px solid var(--gold);text-decoration:none;cursor:pointer;line-height:1}
+.btn--quiet{color:var(--fg-2);border-color:var(--line-2)}
+.side__hint{font-size:14px;color:var(--fg-3)}
+.footer{padding:72px 0 96px;font-size:14px;color:var(--fg-3)}
+
+@media (max-width:900px){
+  .sec__row{grid-template-columns:1fr;gap:32px}
+  .frame--mob{max-width:392px}
+}
+@media (max-width:640px){
+  .toc{columns:1}
+  .rule{padding:28px 20px}
+  .type-row{grid-template-columns:1fr;gap:4px}
+  .tbl th{width:110px}
+  .block{padding:80px 0}
+  .sec{padding:72px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wide">
+    <div class="mark">ALTA<span>★</span>MALE LAB</div>
+    <div class="ver">Homepage · Référence V3.1 · 16.10.2026</div>
+  </div>
+</header>
+
+<section class="block block--first">
+  <div class="wrap">
+    <span class="eyebrow">Référence d'intégration</span>
+    <h1>Homepage ALTA MALE LAB — rendu attendu et méthode Divi.</h1>
+    <p class="lede">Cette page montre les 10 sections de la homepage telles qu'elles doivent apparaître sur le site, en desktop et en mobile. Chaque aperçu est produit par le fichier exact à intégrer : ce que tu vois ici, c'est ce que le fichier donne une fois collé.</p>
+    <p>Elle remplace le prototype Claude Design (qui demandait un compte) et la page « Design System » de mai. Les fichiers sont les mêmes que dans le K-Drive, dossier <code>02_HOMEPAGE_CODE</code> (README v1.1).</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">01 — La règle</span>
+    <h2>Un fichier = un module Code.</h2>
+    <div class="rule">
+      <p class="rule__h">Chaque section de la homepage = un seul module Code Divi, dans lequel on colle le fichier HTML/CSS correspondant, tel quel.</p>
+      <p><span class="no">Aucun</span> module Texte, Titre, Bouton, Blog, Image ou Séparateur. <span class="no">Aucun</span> réglage de style Divi (police, taille, couleur, espacement, responsive). <span class="no">Aucun</span> texte retapé.</p>
+    </div>
+    <p>Tout le design (textes, césures, graisses, couleurs, espacements, version mobile) est déjà dans le fichier. Divi sert uniquement de structure : une section, une ligne, une colonne, un module Code.</p>
+    <p>Les seules modifications permises dans le code sont prévues et signalées : l'adresse des photos (S05 et S08) et, plus tard, les vrais liens et le formulaire.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">02 — Réglages Divi</span>
+    <h2>Préparer chaque section.</h2>
+    <table class="tbl">
+      <tr><th>Section</th><td>Couleur de fond <code>#000000</code>. Marges intérieures haut et bas : <code>0px</code> (chaque fichier gère ses 120 px lui-même).</td></tr>
+      <tr><th>Ligne (Row)</th><td>Largeur <code>100%</code>, largeur max <code>100%</code>, marges intérieures <code>0px</code>, gouttière <code>1</code>. Le fichier centre lui-même son contenu sur 760 px.</td></tr>
+      <tr><th>Colonne</th><td>Une seule colonne, marges intérieures <code>0px</code>.</td></tr>
+      <tr><th>Module</th><td>Un seul module <strong>Code</strong>, marges <code>0px</code>. Coller le fichier complet, de <code>&lt;!--</code> jusqu'à la dernière balise.</td></tr>
+      <tr><th>Hero (S01)</th><td>Même chose, plus : photo B&amp;W en <em>Background Image</em> de la section (Center Right, Cover). Le bloc fait lui-même 100 % de la hauteur de l'écran.</td></tr>
+    </table>
+    <h4>Coller sans abîmer le code</h4>
+    <ol class="steps">
+      <li>Prendre le fichier depuis cette page (bouton « Copier le code » ou « Télécharger le fichier ») ou depuis le K-Drive, ouvert dans un éditeur de texte (VS Code). Jamais depuis un email ou un document Word : les guillemets seraient modifiés.</li>
+      <li>Coller dans l'onglet de contenu du module Code, sans rien ajouter ni retirer.</li>
+      <li>Garder les liens provisoires <code>#journal</code>, <code>#framework</code>, <code>#manifesto</code>, <code>#academy</code>, <code>#quiz</code> tels quels. Ils seront remplacés quand les pages existeront.</li>
+      <li>Enregistrer, puis vider les caches : <strong>Delete Cache</strong> (barre WordPress, WP Super Cache), cache CSS de Divi, et Cloudflare si besoin.</li>
+      <li>Comparer la section avec son aperçu ci-dessous, en desktop puis en mobile.</li>
+    </ol>
+    <h4>Si quelque chose ne s'affiche pas comme ici</h4>
+    <p>Ne pas corriger dans Divi et ne pas modifier le code. Envoyer une capture et une phrase qui décrit ce qui se passe (section, desktop ou mobile). Un fichier corrigé, adapté à Divi, est renvoyé.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">03 — Design system</span>
+    <h2>Les valeurs utilisées dans les fichiers.</h2>
+    <p>Pour information : elles sont déjà dans le code, il n'y a rien à régler dans Divi.</p>
+    <div class="swatches">
+      <div class="sw"><div class="sw__c" style="background:#000000"></div><div class="sw__t"><b>#000000</b>Fond de toutes les sections</div></div>
+      <div class="sw"><div class="sw__c" style="background:#0A0A0A"></div><div class="sw__t"><b>#0A0A0A</b>Footer, emplacements photo</div></div>
+      <div class="sw"><div class="sw__c" style="background:#1F1F1F"></div><div class="sw__t"><b>#1F1F1F</b>Traits fins, bordures</div></div>
+      <div class="sw"><div class="sw__c" style="background:#2A2A2A"></div><div class="sw__t"><b>#2A2A2A</b>Bordure carte quiz, champ email</div></div>
+      <div class="sw"><div class="sw__c" style="background:#C8B568"></div><div class="sw__t"><b>#C8B568</b>Or : boutons principaux, logo</div></div>
+      <div class="sw"><div class="sw__c" style="background:#FFFFFF"></div><div class="sw__t"><b>#FFFFFF</b>Titre du hero, lignes d'accent</div></div>
+      <div class="sw"><div class="sw__c" style="background:#EDEDED"></div><div class="sw__t"><b>#EDEDED</b>Texte principal</div></div>
+      <div class="sw"><div class="sw__c" style="background:#B8B8B8"></div><div class="sw__t"><b>#B8B8B8</b>Texte secondaire</div></div>
+      <div class="sw"><div class="sw__c" style="background:#8A8A8A"></div><div class="sw__t"><b>#8A8A8A</b>Dates, mentions discrètes</div></div>
+    </div>
+    <div class="type-row"><div class="k">Titres</div><div style="font-family:'Poppins',sans-serif;font-weight:600;color:var(--fg-1);font-size:28px;line-height:1.2">Poppins SemiBold 600 · Medium 500</div></div>
+    <div class="type-row"><div class="k">Texte</div><div style="font-family:'Lato',sans-serif;font-weight:400;color:var(--fg-1);font-size:18px">Lato Regular 400 · Light 300 · Bold 700, 18 px minimum</div></div>
+    <div class="type-row"><div class="k">Labels</div><div style="font-family:'Poppins',sans-serif;font-weight:500;color:var(--fg-2);font-size:12px;letter-spacing:.28em;text-transform:uppercase">Poppins 500 · majuscules espacées</div></div>
+    <div class="type-row"><div class="k">Mise en page</div><div>Contenu centré sur 760 px maximum · 120 px en haut et en bas de chaque section · aucune ombre, animation ou effet décoratif.</div></div>
+    <div class="type-row"><div class="k">Termes fixes</div><div>Toujours en anglais, jamais traduits : The Long Game · Alta Male Lab · Alta Framework · Metabolic Intelligence · Strength &amp; Muscles · Mind &amp; Nervous System.</div></div>
+    <div class="type-row"><div class="k">Polices</div><div>Chaque fichier charge Poppins et Lato. Si elles sont déjà chargées dans le thème, la ligne <code>@import</code> peut être retirée de chaque fichier (voir README).</div></div>
+  </div>
+</section>
+
+<section class="block" style="border-bottom:0;padding-bottom:40px">
+  <div class="wrap">
+    <span class="eyebrow">04 — Les 10 sections</span>
+    <h2>Rendu attendu, section par section.</h2>
+    <p>En desktop, l'aperçu est la largeur réelle de 1440 px réduite pour tenir dans la page. En mobile, il est à taille réelle (390 px). Dans l'aperçu du hero, la photo n'apparaît que si elle est placée sur cette page ; sur le site, elle vient de la section Divi.</p>
+    <ul class="toc"><li><a href="#s01"><span>S01</span>The Long Game — Hero</a></li><li><a href="#s02"><span>S02</span>Beyond Alpha</a></li><li><a href="#s03"><span>S03</span>The Metabolic Upgrade Quiz</a></li><li><a href="#s04"><span>S04</span>The Alta Framework</a></li><li><a href="#s05"><span>S05</span>Featured Article</a></li><li><a href="#s06"><span>S06</span>Latest Articles</a></li><li><a href="#s07"><span>S07</span>The Long Game Starts at 40</a></li><li><a href="#s08"><span>S08</span>A Note from the Founder</a></li><li><a href="#s09"><span>S09</span>From Knowledge to Transformation</a></li><li><a href="#s10"><span>S10</span>Join the Alta Circle + Footer</a></li></ul>
+  </div>
+</section>
+
+<div class="wide">
+
+<article class="sec" id="s01">
+  <header class="sec__head">
+    <div class="sec__num">S01</div>
+    <div>
+      <h3 class="sec__title">The Long Game — Hero</h3>
+      <div class="sec__file"><code>section-01-hero-v3.html</code> <span class="tag">Section fixe</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440" data-h="810">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s01.html" title="S01 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390" data-h="844">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s01.html" title="S01 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Version V3 : le bloc a un fond transparent. Le noir et la photo viennent de la Section Divi.</li><li>Section Divi en plein écran, couleur de fond #000000, photo B&amp;W en <em>Background Image</em> (position Center Right, taille Cover).</li><li>Titre sur 3 lignes, sous-titre en Poppins MAJUSCULES espacées.</li><li>Pied « Issue N° 12 · <b>Out now</b> · 18.05.2026 » aligné sur le bouton « Read the latest », avec le trait fin au-dessus. « Out now » en blanc.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-01-hero-v3.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-01-hero-v3.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s02">
+  <header class="sec__head">
+    <div class="sec__num">S02</div>
+    <div>
+      <h3 class="sec__title">Beyond Alpha</h3>
+      <div class="sec__file"><code>section-02-beyond-alpha.html</code> <span class="tag">Section fixe</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s02.html" title="S02 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s02.html" title="S02 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Quatre lignes, chacune sur sa propre ligne.</li><li>La dernière ligne « We build durable men. » est en Poppins Medium (500), en blanc : elle ressort plus que les trois autres.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-02-beyond-alpha.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-02-beyond-alpha.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s03">
+  <header class="sec__head">
+    <div class="sec__num">S03</div>
+    <div>
+      <h3 class="sec__title">The Metabolic Upgrade Quiz</h3>
+      <div class="sec__file"><code>section-03-quiz.html</code> <span class="tag tag--live">Section vivante</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s03.html" title="S03 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s03.html" title="S03 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Carte avec une bordure fine, contenu centré, trois points numérotés 01 · 02 · 03.</li><li>Lien provisoire <code>#quiz</code> à garder tel quel tant que le quiz n'existe pas.</li><li>Section vivante : le quiz sera branché plus tard.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-03-quiz.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-03-quiz.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s04">
+  <header class="sec__head">
+    <div class="sec__num">S04</div>
+    <div>
+      <h3 class="sec__title">The Alta Framework</h3>
+      <div class="sec__file"><code>section-04-framework.html</code> <span class="tag">Section fixe</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s04.html" title="S04 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s04.html" title="S04 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Trois colonnes en desktop, empilées en mobile.</li><li>Noms des piliers toujours en anglais : Metabolic Intelligence · Strength &amp; Muscles · Mind &amp; Nervous System.</li><li>Sous-titre exact : « A biological approach to masculine longevity. »</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-04-framework.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-04-framework.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s05">
+  <header class="sec__head">
+    <div class="sec__num">S05</div>
+    <div>
+      <h3 class="sec__title">Featured Article</h3>
+      <div class="sec__file"><code>section-05-featured-article.html</code> <span class="tag tag--live">Section vivante</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s05.html" title="S05 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s05.html" title="S05 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Carte en deux colonnes : image à gauche, texte à droite.</li><li>Photo : seule modification permise dans le code, remplacer le bloc <code>.alta-feat__image-slot</code> par <code>&lt;img src="URL" alt="…"&gt;</code>.</li><li>Section vivante : affichera plus tard l'article marqué « Featured ».</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-05-featured-article.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-05-featured-article.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s06">
+  <header class="sec__head">
+    <div class="sec__num">S06</div>
+    <div>
+      <h3 class="sec__title">Latest Articles</h3>
+      <div class="sec__file"><code>section-06-latest-articles.html</code> <span class="tag tag--live">Section vivante</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s06.html" title="S06 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s06.html" title="S06 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Une seule colonne de titre, puis une grille de 6 cartes (3 × 2), de N° 12 à N° 07, dans cet ordre.</li><li>Dates fictives provisoires : N° 09 12.03.2026 · N° 08 26.02.2026 · N° 07 12.02.2026.</li><li>Pas de module Blog Divi à ce stade. Section vivante : sera reliée aux vrais articles plus tard.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-06-latest-articles.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-06-latest-articles.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s07">
+  <header class="sec__head">
+    <div class="sec__num">S07</div>
+    <div>
+      <h3 class="sec__title">The Long Game Starts at 40</h3>
+      <div class="sec__file"><code>section-07-manifesto.html</code> <span class="tag">Section fixe</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s07.html" title="S07 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s07.html" title="S07 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Titre centré, quatre paragraphes en Lato 18 px.</li><li>Le lien « Read the Manifesto → » en bas de section est obligatoire.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-07-manifesto.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-07-manifesto.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s08">
+  <header class="sec__head">
+    <div class="sec__num">S08</div>
+    <div>
+      <h3 class="sec__title">A Note from the Founder</h3>
+      <div class="sec__file"><code>section-08-founder.html</code> <span class="tag">Section fixe</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s08.html" title="S08 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s08.html" title="S08 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Titre seul « A Note from the Founder. » : pas de surtitre au-dessus.</li><li>Texte à gauche, portrait à droite (format 4:5).</li><li>Photo : remplacer le bloc <code>.alta-founder__photo-slot</code> par <code>&lt;img src="URL" alt="Anthony K."&gt;</code>.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-08-founder.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-08-founder.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s09">
+  <header class="sec__head">
+    <div class="sec__num">S09</div>
+    <div>
+      <h3 class="sec__title">From Knowledge to Transformation</h3>
+      <div class="sec__file"><code>section-09-academy-bridge.html</code> <span class="tag">Section fixe</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s09.html" title="S09 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s09.html" title="S09 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Deux lignes de couleurs différentes : la première claire (#EDEDED), la seconde plus grise (#B8B8B8).</li><li>Bouton secondaire volontairement discret (texte clair, bordure grise), pas en or.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-09-academy-bridge.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-09-academy-bridge.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s10">
+  <header class="sec__head">
+    <div class="sec__num">S10</div>
+    <div>
+      <h3 class="sec__title">Join the Alta Circle + Footer</h3>
+      <div class="sec__file"><code>section-10-newsletter-footer.html</code> <span class="tag tag--live">Section vivante</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s10.html" title="S10 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s10.html" title="S10 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>Newsletter et footer dans le même module Code.</li><li>Formulaire : à relier plus tard à l'outil d'emailing (attribut <code>action</code> du <code>&lt;form&gt;</code>).</li><li>Copyright exact : « © Alta Male Media 2026 · ALTA MALE LAB ».</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-10-newsletter-footer.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-10-newsletter-footer.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">05 — Plus tard</span>
+    <h2>Ce qui viendra après l'intégration.</h2>
+    <ul class="plain">
+      <li><strong>Sections vivantes (S03, S05, S06, S10).</strong> On colle le code maintenant pour le rendu. Ensuite, elles seront branchées sur WordPress : vrais articles du Journal, quiz, formulaire et outil d'emailing.</li>
+      <li><strong>Articles.</strong> Un modèle d'article au style ALTA dans le Theme Builder Divi, puis S05 et S06 reliées aux articles publiés. Le design et le CSS seront fournis.</li>
+      <li><strong>Langues (WPML).</strong> Une page homepage par langue, reliées par WPML. Les fichiers FR et DE de chaque section seront fournis séparément.</li>
+      <li><strong>Page About.</strong> Refaite avec la même méthode, une fois la homepage terminée. Les fichiers mis à jour seront fournis.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">ALTA MALE LAB · Référence d'intégration homepage · document de travail, non public.</div>
+</footer>
+
+<script>
+(function(){
+  function fit(frame){
+    var box = frame.querySelector('.frame__box');
+    var ifr = frame.querySelector('iframe');
+    var w = parseInt(frame.dataset.w,10);
+    var fixedH = frame.dataset.h ? parseInt(frame.dataset.h,10) : null;
+    var avail = box.clientWidth || w;
+    var scale = Math.min(1, avail / w);
+    ifr.style.width = w + 'px';
+    var h = fixedH;
+    if(!h){
+      try{
+        var d = ifr.contentDocument;
+        if(d && d.body && d.URL !== 'about:blank' && d.readyState !== 'loading'){
+          ifr.style.height = '10px';
+          h = Math.max(d.documentElement.scrollHeight, d.body.scrollHeight);
+        }
+      }catch(e){}
+    }
+    if(!h){ h = 600; }
+    ifr.style.height = h + 'px';
+    ifr.style.transform = 'scale(' + scale + ')';
+    box.style.height = Math.ceil(h * scale) + 'px';
+  }
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.frame'));
+  frames.forEach(function(f){
+    var ifr = f.querySelector('iframe');
+    var w = parseInt(f.dataset.w,10);
+    ifr.style.width = w + 'px';
+    ifr.style.height = (f.dataset.h || 600) + 'px';
+    ifr.addEventListener('load', function(){
+      fit(f);
+      try{
+        var d = ifr.contentDocument;
+        if(d && d.fonts && d.fonts.ready){ d.fonts.ready.then(function(){ fit(f); }); }
+      }catch(e){}
+      setTimeout(function(){ fit(f); }, 800);
+    });
+    fit(f);
+  });
+  var t;
+  window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(function(){ frames.forEach(fit); }, 120); });
+
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var label = btn.textContent;
+      fetch(btn.dataset.copy, {cache:'no-store'})
+        .then(function(r){ if(!r.ok){ throw new Error(r.status); } return r.text(); })
+        .then(function(txt){ return navigator.clipboard.writeText(txt); })
+        .then(function(){ btn.textContent = 'Code copié'; setTimeout(function(){ btn.textContent = label; }, 2000); })
+        .catch(function(){ btn.textContent = 'Utiliser « Télécharger »'; setTimeout(function(){ btn.textContent = label; }, 3000); });
+    });
+  });
+})();
+</script>
+</body>
+</html>
