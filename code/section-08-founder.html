@@ -107,6 +107,24 @@
   .alta-founder__layout { grid-template-columns: 1fr; gap: 48px; }
   .alta-founder__photo { max-width: 280px; margin: 0 auto; }
 }
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-founder {
+  position: relative;
+}
+.alta-founder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
 </style>
 
 <section class="alta-founder">

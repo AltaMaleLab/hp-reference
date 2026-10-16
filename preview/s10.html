@@ -58,7 +58,6 @@
 .alta-nl {
   background: #000000;
   padding: 120px 24px;
-  border-top: 1px solid #1F1F1F;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -323,6 +322,24 @@
     align-items: flex-start;
     gap: 12px;
   }
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-nl {
+  position: relative;
+}
+.alta-nl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
 }
 </style>
 
