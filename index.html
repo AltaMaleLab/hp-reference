@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:'Gaoel';src:url('assets/gaoel.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
 :root{
   --bg:#000000; --bg-2:#0A0A0A; --line:#1F1F1F; --line-2:#2A2A2A;
   --fg-1:#EDEDED; --fg-2:#B8B8B8; --fg-3:#8A8A8A; --fg-4:#5A5A5A; --gold:#C8B568;
@@ -25,8 +26,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;col
 /* Masthead */
 .mast{border-bottom:1px solid var(--line);padding:28px 0}
 .mast .wide{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.mark{font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-.mark span{font-size:10px;vertical-align:2px;margin:0 .5em}
+.mark{font-family:'Gaoel','Poppins',sans-serif;font-weight:400;font-size:17px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.mark span{font-family:'Poppins',sans-serif;font-size:10px;vertical-align:3px;margin:0 .5em}
 .ver{font-family:'Poppins',sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--fg-3)}
 
 /* Type */
@@ -151,6 +152,7 @@ strong{color:var(--fg-1);font-weight:700}
       <tr><th>Ligne (Row)</th><td>Largeur <code>100%</code>, largeur max <code>100%</code>, marges intérieures <code>0px</code>, gouttière <code>1</code>. Le fichier centre lui-même son contenu sur 760 px.</td></tr>
       <tr><th>Colonne</th><td>Une seule colonne, marges intérieures <code>0px</code>.</td></tr>
       <tr><th>Module</th><td>Un seul module <strong>Code</strong>, marges <code>0px</code>. Coller le fichier complet, de <code>&lt;!--</code> jusqu'à la dernière balise.</td></tr>
+      <tr><th>Police Gaoel</th><td>À faire une seule fois pour tout le site. Gaoel sert uniquement au logo (footer S10 et en-tête). Elle n'est pas sur Google Fonts : téléverser <a href="assets/gaoel.woff2" download>gaoel.woff2</a> dans la médiathèque WordPress, puis ajouter dans <em>Divi → Options du thème → CSS personnalisé</em> :<br><code>@font-face { font-family: 'Gaoel'; src: url('URL-DU-FICHIER/gaoel.woff2') format('woff2'); font-display: swap; }</code><br>en remplaçant URL-DU-FICHIER par l'adresse du fichier dans la médiathèque. Jamais Gaoel pour les titres ou le texte.</td></tr>
       <tr><th>Hero (S01)</th><td>Même chose, plus : photo B&amp;W en <em>Background Image</em> de la section (Center Right, Cover). Le bloc fait lui-même 100 % de la hauteur de l'écran.</td></tr>
     </table>
     <h4>Coller sans abîmer le code</h4>
@@ -184,6 +186,8 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="type-row"><div class="k">Titres</div><div style="font-family:'Poppins',sans-serif;font-weight:600;color:var(--fg-1);font-size:28px;line-height:1.2">Poppins SemiBold 600 · Medium 500</div></div>
     <div class="type-row"><div class="k">Texte</div><div style="font-family:'Lato',sans-serif;font-weight:400;color:var(--fg-1);font-size:18px">Lato Regular 400 · Light 300 · Bold 700, 18 px minimum</div></div>
+    <div class="type-row"><div class="k">Logo</div><div style="font-family:'Gaoel','Poppins',sans-serif;color:var(--gold);font-size:24px;letter-spacing:.14em">ALTA MALE LAB</div></div>
+    <div class="type-row"><div class="k">Police du logo</div><div>Gaoel, uniquement pour le logo (wordmark). Jamais pour les titres ni pour le texte.</div></div>
     <div class="type-row"><div class="k">Labels</div><div style="font-family:'Poppins',sans-serif;font-weight:500;color:var(--fg-2);font-size:12px;letter-spacing:.28em;text-transform:uppercase">Poppins 500 · majuscules espacées</div></div>
     <div class="type-row"><div class="k">Mise en page</div><div>Contenu centré sur 760 px maximum · 120 px en haut et en bas de chaque section · aucune ombre, animation ou effet décoratif.</div></div>
     <div class="type-row"><div class="k">Termes fixes</div><div>Toujours en anglais, jamais traduits : The Long Game · Alta Male Lab · Alta Framework · Metabolic Intelligence · Strength &amp; Muscles · Mind &amp; Nervous System.</div></div>
