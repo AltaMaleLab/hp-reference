@@ -1,0 +1,2336 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ALTA MALE LAB — Homepage</title>
+<style>@font-face{font-family:'Gaoel';src:url('../assets/gaoel.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}html,body{margin:0;padding:0;background:#000000;}.divi-section--hero{background:#000000 url('../assets/hero.jpg') center right / cover no-repeat;}</style>
+</head><body>
+<div class="divi-section divi-section--hero">
+<!-- ============================================================
+     ALTA MALE LAB — Section 1: Hero
+     Divi Code Module — standalone block
+     VERSION 3 — 10.10.2026
+     (V2 = nouveau hook du 08.08.2026)
+
+     CHANGEMENTS V3 :
+     1. Fond transparent : .alta-hero n'a plus de background opaque.
+        La photo posée en Background Image de la section Divi
+        est maintenant visible. (Correctif suite au retour de
+        Laurent : le fond #000000 masquait la photo.)
+     2. Footer "Issue N° 12" aligné sur le contenu (padding gauche
+        48px, comme .alta-hero__inner).
+     3. Sous-titre (deck) : Poppins 400, MAJUSCULES, letter-spacing
+        0.2em (au lieu de Lato Light en minuscules).
+
+     SETUP NOTES :
+     1. Placer ce code dans un Code Module Divi, dans une Section
+        Fullwidth / Fullscreen. Mettre la couleur de fond de la
+        Section Divi sur #000000 (c'est elle qui fournit le noir,
+        plus ce bloc).
+     2. Photo B&W éditoriale : à poser en Background Image de la
+        Section Divi (Design → Background). Le voile dégradé
+        (.alta-hero__veil) garantit la lisibilité du texte.
+     3. Supprimer la ligne @import ci-dessous si Poppins + Lato
+        sont déjà chargées globalement dans le thème.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-hero *,
+.alta-hero *::before,
+.alta-hero *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell --------------------------------------------
+   V3 : background transparent — le noir et la photo viennent de
+   la Section Divi, pas de ce bloc.                                */
+.alta-hero {
+  position: relative;
+  background: transparent;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Gradient veil (left-to-transparent) ----------------------
+   Covers the left area so text is readable over a B&W photo.
+   Has no visual effect on a plain black background.               */
+.alta-hero__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.92) 0%,
+      rgba(0,0,0,0.78) 28%,
+      rgba(0,0,0,0.30) 55%,
+      rgba(0,0,0,0.00) 75%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.00) 60%,
+      rgba(0,0,0,0.55) 100%
+    );
+  pointer-events: none;
+}
+
+/* --- Content column ------------------------------------------- */
+.alta-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: auto;
+  width: 100%;
+  padding: 120px 48px 72px;
+}
+
+/* --- Eyebrow -------------------------------------------------- */
+.alta-hero__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  opacity: 0.75;
+  margin-bottom: 28px;
+  line-height: 1;
+  display: block;
+}
+
+/* --- Headline ------------------------------------------------- */
+.alta-hero__h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1.10;
+  letter-spacing: -0.015em;
+  margin-bottom: 20px;
+  max-width: 640px;
+  text-wrap: balance;
+}
+
+/* Each line of the hook on its own block */
+.alta-hero__h1 span {
+  display: block;
+}
+
+/* --- Deck / subtitle ----------------------------------------- */
+.alta-hero__deck {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: clamp(0.78rem, 1.3vw, 0.9rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* --- CTA row -------------------------------------------------- */
+.alta-hero__cta {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Primary CTA — gold border, gold text */
+.alta-hero__btn-primary {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Quiet CTA — secondary text, arrow suffix */
+.alta-hero__btn-quiet {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  color: #B8B8B8;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1;
+}
+
+.alta-hero__btn-quiet .alta-hero__arr {
+  color: #8A8A8A;
+}
+
+/* --- Footer bar -----------------------------------------------
+   V3 : padding gauche/droite 48px (identique à .alta-hero__inner)
+   pour que "Issue N° 12" s'aligne sur "Read the latest".           */
+.alta-hero__foot {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: auto;
+  width: 100%;
+  padding: 24px 48px 40px;
+  border-top: 1px solid #1F1F1F;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #8A8A8A;
+  line-height: 1;
+}
+
+.alta-hero__foot b {
+  color: #EDEDED;
+  font-weight: 500;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 768px) {
+  .alta-hero {
+    min-height: 100svh;
+    height: 100svh;
+  }
+  .alta-hero__inner {
+    padding: 80px 20px 56px;
+  }
+  .alta-hero__foot {
+    padding: 20px 20px 32px;
+  }
+  .alta-hero__deck {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+  /* Correctif 16.10.2026 : en mobile, la photo est recadrée et le
+     ciel clair passe derrière le texte. Le voile devient vertical et
+     plus dense sous le texte pour garder la lecture. Le retour à la
+     ligne forcé du sous-titre est retiré (césure naturelle). */
+  .alta-hero__veil {
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.25) 0%,
+      rgba(0,0,0,0.65) 32%,
+      rgba(0,0,0,0.86) 55%,
+      rgba(0,0,0,0.92) 100%
+    );
+  }
+  .alta-hero__deck br {
+    display: none;
+  }
+}
+</style>
+
+<section class="alta-hero">
+
+  <!-- Gradient veil (text readability over photo) -->
+  <div class="alta-hero__veil"></div>
+
+  <!-- Content -->
+  <div class="alta-hero__inner">
+    <span class="alta-hero__eyebrow">The Long Game for Men 40+</span>
+    <h1 class="alta-hero__h1">
+      <span>Don't Fight Your Body.</span>
+      <span>Learn Its Language.</span>
+      <span>Come Home to Yourself.</span>
+    </h1>
+    <p class="alta-hero__deck">
+      Evidence-based insights on metabolic health, strength,<br>
+      longevity and conscious masculinity for men 40+.
+    </p>
+    <div class="alta-hero__cta">
+      <a href="#journal" class="alta-hero__btn-primary">Read the latest</a>
+      <a href="#framework" class="alta-hero__btn-quiet">
+        The Alta Framework
+        <span class="alta-hero__arr">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Issue foot bar -->
+  <div class="alta-hero__foot">
+    Issue N°&nbsp;12 &nbsp;·&nbsp; <b>Out now</b> &nbsp;·&nbsp; 18.05.2026
+  </div>
+
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 2: Beyond Alpha
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-alpha *,
+.alta-alpha *::before,
+.alta-alpha *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-alpha {
+  background: #000000;
+  padding: 120px 24px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner content column (760px max) ------------------------- */
+.alta-alpha__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Title ---------------------------------------------------- */
+.alta-alpha__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: #EDEDED;
+  margin-bottom: 40px;
+  text-wrap: balance;
+}
+
+/* --- Body lines ----------------------------------------------- */
+.alta-alpha__body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
+  line-height: 1.5;
+  color: #EDEDED;
+  margin-bottom: 56px;
+}
+
+.alta-alpha__body span {
+  display: block;
+}
+
+/* Highlight the final line */
+.alta-alpha__body span:last-child {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+/* --- CTA ------------------------------------------------------ */
+.alta-alpha__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.alta-alpha__arr {
+  color: #C8B568;
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-alpha {
+  position: relative;
+}
+.alta-alpha::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-alpha">
+  <div class="alta-alpha__inner">
+
+    <h2 class="alta-alpha__h2">Beyond Alpha.</h2>
+
+    <p class="alta-alpha__body">
+      <span>We don't coach domination.</span>
+      <span>We don't sell noise.</span>
+      <span>We don't manufacture ego.</span>
+      <span>We build durable men.</span>
+    </p>
+
+    <a href="#long-game" class="alta-alpha__cta">
+      Enter the Long Game
+      <span class="alta-alpha__arr">→</span>
+    </a>
+
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 3: The Metabolic Upgrade Quiz
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-quiz *,
+.alta-quiz *::before,
+.alta-quiz *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-quiz {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-quiz__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Bordered card -------------------------------------------- */
+.alta-quiz__card {
+  border: 1px solid #2A2A2A;
+  padding: 72px 56px;
+  text-align: center;
+}
+
+/* --- Eyebrow -------------------------------------------------- */
+.alta-quiz__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  display: block;
+  margin-bottom: 28px;
+  line-height: 1;
+}
+
+/* --- Title ---------------------------------------------------- */
+.alta-quiz__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.875rem, 3.5vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  margin-bottom: 24px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+
+/* --- Deck ----------------------------------------------------- */
+.alta-quiz__deck {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #B8B8B8;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
+
+/* --- Three items ---------------------------------------------- */
+.alta-quiz__list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 52px;
+  flex-wrap: wrap;
+}
+
+.alta-quiz__item {
+  flex: 0 1 180px;
+  text-align: left;
+}
+
+.alta-quiz__item-num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #8A8A8A;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.alta-quiz__item-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #EDEDED;
+}
+
+/* --- Divider above items ------------------------------------- */
+.alta-quiz__rule {
+  border: none;
+  border-top: 1px solid #1F1F1F;
+  width: 56px;
+  margin: 0 auto 48px;
+}
+
+/* --- CTA ------------------------------------------------------ */
+.alta-quiz__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.alta-quiz__arr {
+  color: #C8B568;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 600px) {
+  .alta-quiz__card {
+    padding: 48px 28px;
+  }
+  .alta-quiz__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .alta-quiz__item {
+    flex: none;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-quiz {
+  position: relative;
+}
+.alta-quiz::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-quiz">
+  <div class="alta-quiz__inner">
+    <div class="alta-quiz__card">
+
+      <span class="alta-quiz__eyebrow">The Metabolic Upgrade Quiz</span>
+
+      <h2 class="alta-quiz__h2">Discover your metabolic trajectory after&nbsp;40.</h2>
+
+      <p class="alta-quiz__deck">
+        A short, calibrated assessment to map where your engine actually stands —
+        and the single lever most likely to change everything.
+      </p>
+
+      <hr class="alta-quiz__rule">
+
+      <div class="alta-quiz__list">
+        <div class="alta-quiz__item">
+          <div class="alta-quiz__item-num">01</div>
+          <div class="alta-quiz__item-text">Your metabolic risk profile, in plain numbers.</div>
+        </div>
+        <div class="alta-quiz__item">
+          <div class="alta-quiz__item-num">02</div>
+          <div class="alta-quiz__item-text">The key lever for your physiology — not someone else's.</div>
+        </div>
+        <div class="alta-quiz__item">
+          <div class="alta-quiz__item-num">03</div>
+          <div class="alta-quiz__item-text">A staged upgrade plan you can start this week.</div>
+        </div>
+      </div>
+
+      <a href="#quiz" class="alta-quiz__cta">
+        Take the Quiz — less than 3 minutes
+        <span class="alta-quiz__arr">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 4: The Alta Framework
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-fw *,
+.alta-fw *::before,
+.alta-fw *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-fw {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-fw__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Section header ------------------------------------------- */
+.alta-fw__head {
+  margin-bottom: 20px;
+}
+
+.alta-fw__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.alta-fw__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  max-width: 560px;
+  text-wrap: balance;
+}
+
+/* --- Three-column pillar grid --------------------------------- */
+.alta-fw__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #1F1F1F;
+  margin-top: 16px;
+}
+
+.alta-fw__col {
+  padding: 40px 28px;
+  border-right: 1px solid #1F1F1F;
+}
+
+.alta-fw__col:last-child {
+  border-right: none;
+}
+
+/* --- Pillar number -------------------------------------------- */
+.alta-fw__num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  color: #8A8A8A;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+
+/* --- Pillar title --------------------------------------------- */
+.alta-fw__h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #EDEDED;
+  margin-bottom: 14px;
+  text-wrap: balance;
+}
+
+/* --- Pillar body ---------------------------------------------- */
+.alta-fw__p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #B8B8B8;
+}
+
+/* --- Micro-signature ------------------------------------------ */
+.alta-fw__sig {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #8A8A8A;
+  margin-top: 18px;
+}
+
+/* --- Footer CTA ----------------------------------------------- */
+.alta-fw__cta-row {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.alta-fw__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  color: #B8B8B8;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.alta-fw__arr {
+  color: #8A8A8A;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 640px) {
+  .alta-fw__grid {
+    grid-template-columns: 1fr;
+  }
+  .alta-fw__col {
+    border-right: none;
+    border-bottom: 1px solid #1F1F1F;
+    padding: 36px 0;
+  }
+  .alta-fw__col:last-child {
+    border-bottom: none;
+  }
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-fw {
+  position: relative;
+}
+.alta-fw::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-fw">
+  <div class="alta-fw__inner">
+
+    <!-- Section header -->
+    <div class="alta-fw__head">
+      <span class="alta-fw__eyebrow">The Alta Framework</span>
+      <h2 class="alta-fw__title">A biological approach to masculine longevity.</h2>
+    </div>
+
+    <!-- Pillar grid -->
+    <div class="alta-fw__grid">
+
+      <!-- 01 — Metabolic Intelligence -->
+      <div class="alta-fw__col">
+        <div class="alta-fw__num">01</div>
+        <h3 class="alta-fw__h3">Metabolic Intelligence</h3>
+        <p class="alta-fw__p">Energy is biology. Understanding metabolism is the foundation of long-term vitality.</p>
+        <p class="alta-fw__sig">Energy stability determines everything.</p>
+      </div>
+
+      <!-- 02 — Strength & Muscles -->
+      <div class="alta-fw__col">
+        <div class="alta-fw__num">02</div>
+        <h3 class="alta-fw__h3">Strength &amp; Muscles</h3>
+        <p class="alta-fw__p">Muscle is life insurance. After 40, strength becomes structural.</p>
+        <p class="alta-fw__sig">Muscle protects the system.</p>
+      </div>
+
+      <!-- 03 — Mind & Nervous System -->
+      <div class="alta-fw__col">
+        <div class="alta-fw__num">03</div>
+        <h3 class="alta-fw__h3">Mind &amp; Nervous System</h3>
+        <p class="alta-fw__p">The nervous system determines the pace of aging. Stability becomes the new performance.</p>
+        <p class="alta-fw__sig">Regulation creates longevity.</p>
+      </div>
+
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="alta-fw__cta-row">
+      <a href="#framework" class="alta-fw__cta">
+        Explore the Framework
+        <span class="alta-fw__arr">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 5: Featured Article
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     3. To add the editorial photograph, replace the
+        .alta-feat__image-slot div with an <img> tag,
+        or set a background-image on .alta-feat__image.
+        Apply filter: grayscale(1) contrast(1.04) to keep
+        it in the B&W editorial register.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-feat *,
+.alta-feat *::before,
+.alta-feat *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-feat {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-feat__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Card: two columns --------------------------------------- */
+.alta-feat__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #1F1F1F;
+  border-bottom: 1px solid #1F1F1F;
+  min-height: 480px;
+}
+
+/* --- Left: image slot ----------------------------------------- */
+.alta-feat__image {
+  background: #0A0A0A;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #1F1F1F;
+  min-height: 380px;
+}
+
+.alta-feat__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(1) contrast(1.04);
+}
+
+.alta-feat__image-slot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #5A5A5A;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+/* --- Right: text --------------------------------------------- */
+.alta-feat__text {
+  padding: 64px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* --- Eyebrow -------------------------------------------------- */
+.alta-feat__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  line-height: 1;
+}
+
+/* --- Title ---------------------------------------------------- */
+.alta-feat__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3vw, 2.375rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  text-wrap: balance;
+}
+
+/* --- Deck ----------------------------------------------------- */
+.alta-feat__deck {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #B8B8B8;
+}
+
+/* --- CTA ------------------------------------------------------ */
+.alta-feat__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  line-height: 1;
+  align-self: flex-start;
+}
+
+.alta-feat__arr {
+  color: #C8B568;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 640px) {
+  .alta-feat__card {
+    grid-template-columns: 1fr;
+  }
+  .alta-feat__image {
+    min-height: 260px;
+    border-right: none;
+    border-bottom: 1px solid #1F1F1F;
+  }
+  .alta-feat__text {
+    padding: 40px 0;
+  }
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-feat {
+  position: relative;
+}
+.alta-feat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-feat">
+  <div class="alta-feat__inner">
+    <div class="alta-feat__card">
+
+      <!-- Image slot — replace with <img> when photo is available -->
+      <div class="alta-feat__image">
+        <div class="alta-feat__image-slot">
+          B&amp;W editorial portrait<br>— image slot —
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="alta-feat__text">
+        <div class="alta-feat__eyebrow">Featured Article</div>
+        <h2 class="alta-feat__h2">Muscle is your life insurance.</h2>
+        <p class="alta-feat__deck">
+          Why strength becomes one of the most important predictors
+          of longevity after 40 — and why every other system in the
+          body depends on it.
+        </p>
+        <a href="#article" class="alta-feat__cta">
+          Read Article
+          <span class="alta-feat__arr">→</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 6: Latest Articles
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     3. Update href values on each .alta-idx__card to point
+        to your live article URLs.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-idx *,
+.alta-idx *::before,
+.alta-idx *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-idx {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-idx__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Section header row --------------------------------------- */
+.alta-idx__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.alta-idx__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.alta-idx__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 1.875rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  max-width: 480px;
+  text-wrap: balance;
+}
+
+/* Quiet CTA — top right of header */
+.alta-idx__all {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.alta-idx__all-arr {
+  color: #8A8A8A;
+}
+
+/* --- 3×2 grid ------------------------------------------------- */
+.alta-idx__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #1F1F1F;
+}
+
+/* --- Individual card ------------------------------------------ */
+.alta-idx__card {
+  padding: 32px 24px;
+  border-right: 1px solid #1F1F1F;
+  border-bottom: 1px solid #1F1F1F;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Remove right border on every 3rd card */
+.alta-idx__card:nth-child(3n) {
+  border-right: none;
+}
+
+/* Remove bottom border on last row */
+.alta-idx__card:nth-child(4),
+.alta-idx__card:nth-child(5),
+.alta-idx__card:nth-child(6) {
+  border-bottom: none;
+}
+
+/* --- Card elements -------------------------------------------- */
+.alta-idx__card-num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #8A8A8A;
+  line-height: 1;
+}
+
+.alta-idx__card-pillar {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  line-height: 1;
+}
+
+.alta-idx__card-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #EDEDED;
+  text-wrap: balance;
+  flex: 1;
+}
+
+.alta-idx__card-meta {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #8A8A8A;
+  margin-top: auto;
+  line-height: 1;
+}
+
+/* --- Responsive ----------------------------------------------- */
+@media (max-width: 640px) {
+  .alta-idx__grid {
+    grid-template-columns: 1fr;
+  }
+  .alta-idx__card {
+    border-right: none;
+    border-bottom: 1px solid #1F1F1F;
+    padding: 28px 0;
+  }
+  .alta-idx__card:last-child {
+    border-bottom: none;
+  }
+  /* Reset the nth-child overrides for single column */
+  .alta-idx__card:nth-child(4),
+  .alta-idx__card:nth-child(5),
+  .alta-idx__card:nth-child(6) {
+    border-bottom: 1px solid #1F1F1F;
+  }
+  .alta-idx__card:nth-child(6) {
+    border-bottom: none;
+  }
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-idx {
+  position: relative;
+}
+.alta-idx::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-idx">
+  <div class="alta-idx__inner">
+
+    <!-- Section header -->
+    <div class="alta-idx__head">
+      <div>
+        <span class="alta-idx__eyebrow">The Journal</span>
+        <h2 class="alta-idx__title">Latest dispatches.<br>Read for the second half of life.</h2>
+      </div>
+      <a href="#journal" class="alta-idx__all">
+        All issues
+        <span class="alta-idx__all-arr">→</span>
+      </a>
+    </div>
+
+    <!-- 3×2 article grid -->
+    <div class="alta-idx__grid">
+
+      <!-- N° 12 -->
+      <a href="#article-12" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 12</div>
+        <div class="alta-idx__card-pillar">Metabolic Intelligence</div>
+        <h3 class="alta-idx__card-title">After 40, your face doesn't lie anymore.</h3>
+        <div class="alta-idx__card-meta">18.05.2026 · 7 min</div>
+      </a>
+
+      <!-- N° 11 -->
+      <a href="#article-11" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 11</div>
+        <div class="alta-idx__card-pillar">Strength &amp; Muscles</div>
+        <h3 class="alta-idx__card-title">Your internal pharmacy — the molecules muscle makes.</h3>
+        <div class="alta-idx__card-meta">14.04.2026 · 9 min</div>
+      </a>
+
+      <!-- N° 10 -->
+      <a href="#article-10" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 10</div>
+        <div class="alta-idx__card-pillar">Cross-pillar</div>
+        <h3 class="alta-idx__card-title">The Long Game starts at 40.</h3>
+        <div class="alta-idx__card-meta">26.03.2026 · 12 min</div>
+      </a>
+
+      <!-- N° 09 -->
+      <a href="#article-09" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 09</div>
+        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <h3 class="alta-idx__card-title">Why you hate the word "coaching".</h3>
+        <div class="alta-idx__card-meta">12.03.2026 · 6 min</div>
+      </a>
+
+      <!-- N° 08 -->
+      <a href="#article-08" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 08</div>
+        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <h3 class="alta-idx__card-title">You're moving too fast. Your body already knows.</h3>
+        <div class="alta-idx__card-meta">26.02.2026 · 11 min</div>
+      </a>
+
+      <!-- N° 07 -->
+      <a href="#article-07" class="alta-idx__card">
+        <div class="alta-idx__card-num">N° 07</div>
+        <div class="alta-idx__card-pillar">Mind &amp; Nervous System</div>
+        <h3 class="alta-idx__card-title">Antifragility — the principle that changes everything.</h3>
+        <div class="alta-idx__card-meta">12.02.2026 · 8 min</div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 7: The Long Game Starts At 40
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-man *,
+.alta-man *::before,
+.alta-man *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-man {
+  background: #000000;
+  padding: 120px 24px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-man__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Eyebrow -------------------------------------------------- */
+.alta-man__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  display: block;
+  margin-bottom: 28px;
+  line-height: 1;
+}
+
+/* --- Title ---------------------------------------------------- */
+.alta-man__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: #EDEDED;
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+
+/* --- Subtitle (italic) ---------------------------------------- */
+.alta-man__sub {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #8A8A8A;
+  margin-bottom: 56px;
+}
+
+/* --- Prose block (left-aligned within centered shell) --------- */
+.alta-man__prose {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.alta-man__prose p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.78;
+  color: #EDEDED;
+  text-wrap: pretty;
+}
+
+.alta-man__prose p + p {
+  margin-top: 22px;
+}
+
+/* --- Centered hairline divider -------------------------------- */
+.alta-man__rule {
+  border: none;
+  border-top: 1px solid #2A2A2A;
+  width: 56px;
+  margin: 56px auto;
+}
+
+/* --- Footer CTA ----------------------------------------------- */
+.alta-man__cta-row {
+  text-align: center;
+}
+
+.alta-man__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  color: #B8B8B8;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.alta-man__arr {
+  color: #8A8A8A;
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-man {
+  position: relative;
+}
+.alta-man::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-man">
+  <div class="alta-man__inner">
+
+    <span class="alta-man__eyebrow">From the Manifesto</span>
+    <h2 class="alta-man__h2">The Long Game starts at 40.</h2>
+    <p class="alta-man__sub">An educational excerpt from the Manifesto.</p>
+
+    <div class="alta-man__prose">
+      <p>
+        What we call "aging" is actually a process that responds to variables. Variables you
+        largely control. Two men born the same year are not the same biological age.
+        One trains, sleeps, eats with intention. The other lives in a state of chronic
+        tension he calls "a busy life." They share a date of birth. Everything else differs.
+      </p>
+      <p>
+        The 40-year-old man who reaches this article has probably recognized something.
+        Not a revelation. A confirmation. What he already knew, somewhere, but that the
+        noise of daily life made hard to hear clearly.
+      </p>
+      <p>
+        This isn't about motivation. Motivation is an emotion — it rises, it falls, it
+        disappears on a Tuesday morning in November. This is about a decision. A decision
+        made once, that generates behaviors, that become systems, that build a life.
+      </p>
+      <p>
+        The man who plays the Long Game has twenty to twenty-five years ahead to build the
+        best chapter of his life. Not to "stay young". Not to "fight aging". To become,
+        finally, what he already is.
+      </p>
+    </div>
+
+    <hr class="alta-man__rule">
+
+    <div class="alta-man__cta-row">
+      <a href="#manifesto" class="alta-man__cta">
+        Read the Manifesto
+        <span class="alta-man__arr">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ALTA MALE LAB · Section 08 · A Note from the Founder
+     Fix: duplicate eyebrow removed (title only). Divi Code Module. -->
+<style>
+.alta-founder *, .alta-founder *::before, .alta-founder *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.alta-founder {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alta-founder__inner { max-width: 760px; margin-left: auto; margin-right: auto; width: 100%; }
+
+.alta-founder__layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 72px;
+  align-items: center;
+}
+
+.alta-founder__text { display: flex; flex-direction: column; gap: 24px; }
+
+.alta-founder__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.875rem, 3.2vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  text-wrap: balance;
+}
+
+.alta-founder__p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.78;
+  color: #EDEDED;
+  text-wrap: pretty;
+}
+
+.alta-founder__list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+.alta-founder__list li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #EDEDED;
+  padding-left: 22px;
+  position: relative;
+}
+
+.alta-founder__list li::before {
+  content: "·";
+  position: absolute;
+  left: 0;
+  color: #C8B568;
+  font-weight: 700;
+}
+
+.alta-founder__sig {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+  color: #8A8A8A;
+  line-height: 1;
+}
+
+.alta-founder__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #0A0A0A;
+  border: 1px solid #1F1F1F;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.alta-founder__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(1) contrast(1.02);
+}
+
+.alta-founder__photo-slot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #5A5A5A;
+  padding: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .alta-founder__layout { grid-template-columns: 1fr; gap: 48px; }
+  .alta-founder__photo { max-width: 280px; margin: 0 auto; }
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-founder {
+  position: relative;
+}
+.alta-founder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-founder">
+  <div class="alta-founder__inner">
+    <div class="alta-founder__layout">
+
+      <div class="alta-founder__text">
+        <h2 class="alta-founder__h2">A Note from the Founder.</h2>
+        <p class="alta-founder__p">
+          I created ALTA MALE LAB at 54. Not to prove anything. But to build something that
+          lasts. As a man who never fit into rigid boxes — and never wanted to — I built a
+          space where strength and sensitivity coexist.
+        </p>
+        <p class="alta-founder__p">This is a lab for men 40+ who choose:</p>
+        <ul class="alta-founder__list">
+          <li>stability over noise</li>
+          <li>longevity over dominance</li>
+          <li>alignment over performance</li>
+        </ul>
+        <div class="alta-founder__sig">— Anthony K.</div>
+      </div>
+
+      <div class="alta-founder__photo">
+        <div class="alta-founder__photo-slot">
+          Founder portrait<br>B&amp;W · image slot
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 9: From Knowledge To Transformation
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own 120px top/bottom padding.
+     3. Update the href on .alta-bridge__cta to point to
+        your Academy page URL.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Reset for this block ------------------------------------- */
+.alta-bridge *,
+.alta-bridge *::before,
+.alta-bridge *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Section shell -------------------------------------------- */
+.alta-bridge {
+  background: #000000;
+  padding: 120px 24px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Inner column (760px max) --------------------------------- */
+.alta-bridge__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Eyebrow -------------------------------------------------- */
+.alta-bridge__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  display: block;
+  margin-bottom: 28px;
+  line-height: 1;
+}
+
+/* --- Title ---------------------------------------------------- */
+.alta-bridge__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: #EDEDED;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+
+/* --- Two-line copy -------------------------------------------- */
+.alta-bridge__copy {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  line-height: 1.5;
+  margin-bottom: 52px;
+}
+
+.alta-bridge__copy span {
+  display: block;
+}
+
+/* First line — primary #EDEDED */
+.alta-bridge__copy span:first-child {
+  color: #EDEDED;
+}
+
+/* Second line — muted, secondary register */
+.alta-bridge__copy span:last-child {
+  color: #B8B8B8;
+}
+
+/* --- CTA — secondary style (border, no gold fill) ------------ */
+.alta-bridge__cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #EDEDED;
+  border: 1px solid #2A2A2A;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.alta-bridge__arr {
+  color: #8A8A8A;
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-bridge {
+  position: relative;
+}
+.alta-bridge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<section class="alta-bridge">
+  <div class="alta-bridge__inner">
+
+    <span class="alta-bridge__eyebrow">From Knowledge to Transformation</span>
+
+    <h2 class="alta-bridge__h2">Two products. One discipline.</h2>
+
+    <p class="alta-bridge__copy">
+      <span>ALTA MALE LAB explores the ideas.</span>
+      <span>ALTA Body &amp; Mind Academy applies them.</span>
+    </p>
+
+    <a href="#academy" class="alta-bridge__cta">
+      Discover the Academy
+      <span class="alta-bridge__arr">→</span>
+    </a>
+
+  </div>
+</section>
+
+</div>
+<div class="divi-section">
+<!-- ============================================================
+     ALTA MALE LAB — Section 10: Newsletter + Footer
+     Divi Code Module — standalone block
+
+     SETUP NOTES:
+     1. Place this in a Divi Code Module inside a Section
+        with Background Color: #000000.
+     2. Set the Divi Section padding to 0 — this block
+        manages its own spacing throughout.
+     3. Wire the form action on .alta-nl__form to your
+        email service provider (Mailchimp, ConvertKit, etc).
+     4. The △ glyph in the footer wordmark is a plain Unicode
+        character — no image dependency.
+     ============================================================ -->
+
+<style>
+/* --- Font load (remove if already in theme) ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* --- Police du logo : Gaoel, intégrée dans ce fichier (16.10.2026) ---
+   Seules les lettres sont incluses (≈ 7 Ko). Le logo s'affiche ainsi en
+   Gaoel dès que le fichier est collé, sans autre réglage. Ne pas
+   modifier cette ligne. */
+@font-face {
+  font-family: 'Gaoel';
+  src: url('data:font/woff2;base64,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') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020, U+0041-005A, U+0061-007A, U+00B7;
+}
+
+/* --- Reset for this block ------------------------------------- */
+.alta-nl *,
+.alta-nl *::before,
+.alta-nl *::after,
+.alta-ft *,
+.alta-ft *::before,
+.alta-ft *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================================
+   NEWSLETTER
+   ============================================================ */
+
+.alta-nl {
+  background: #000000;
+  padding: 120px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alta-nl__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Newsletter card: two columns ----------------------------- */
+.alta-nl__card {
+  border: 1px solid #1F1F1F;
+  padding: 64px 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* --- Left: editorial copy ------------------------------------- */
+.alta-nl__eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  display: block;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+
+.alta-nl__h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #EDEDED;
+  margin-bottom: 16px;
+  text-wrap: balance;
+}
+
+.alta-nl__p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #B8B8B8;
+}
+
+/* --- Right: form ---------------------------------------------- */
+.alta-nl__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.alta-nl__row {
+  display: flex;
+}
+
+.alta-nl__input {
+  flex: 1;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: #EDEDED;
+  background: transparent;
+  border: 1px solid #2A2A2A;
+  border-right: none;
+  padding: 15px 18px;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.alta-nl__input::placeholder {
+  color: #5A5A5A;
+}
+
+.alta-nl__btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0 28px;
+  background: transparent;
+  color: #C8B568;
+  border: 1px solid #C8B568;
+  border-radius: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-appearance: none;
+}
+
+.alta-nl__help {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: #8A8A8A;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.alta-ft {
+  background: #0A0A0A;
+  border-top: 1px solid #1F1F1F;
+  padding: 80px 24px 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alta-ft__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* --- Four-column grid ----------------------------------------- */
+.alta-ft__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- Brand column --------------------------------------------- */
+.alta-ft__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Logo : police Gaoel (16.10.2026). Gaoel n'est pas sur Google Fonts :
+   elle est chargée une seule fois pour tout le site (voir la
+   référence d'intégration, étape « Police Gaoel »). Poppins sert de
+   secours, et pour les signes △ et ★ que Gaoel ne contient pas. */
+.alta-ft__wordmark {
+  font-family: 'Gaoel', 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: #C8B568;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* △ glyph — Unicode, no image dependency */
+.alta-ft__glyph {
+  font-size: 18px;
+  color: #C8B568;
+  line-height: 1;
+}
+
+/* Le nom est un seul bloc : l'espace autour de l'étoile ne dépend plus
+   du gap du flex (correctif 16.10.2026, aligné sur le logo de référence). */
+.alta-ft__name {
+  white-space: nowrap;
+}
+.alta-ft__star {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.6em;
+  vertical-align: 0.2em;
+  margin: 0 0.5em;
+  display: inline-block;
+  line-height: 1;
+  color: #C8B568;
+}
+
+.alta-ft__tagline {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  color: #B8B8B8;
+  line-height: 1.5;
+}
+
+/* --- Link columns --------------------------------------------- */
+.alta-ft__col-head {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #B8B8B8;
+  margin-bottom: 18px;
+  display: block;
+  line-height: 1;
+}
+
+.alta-ft__link {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #B8B8B8;
+  text-decoration: none;
+  padding: 4px 0;
+  line-height: 1.4;
+}
+
+/* --- Fine print bar ------------------------------------------- */
+.alta-ft__fine {
+  margin-top: 64px;
+  padding: 24px 0 32px;
+  border-top: 1px solid #1F1F1F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.alta-ft__copyright {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: #5A5A5A;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.alta-ft__closer {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  line-height: 1;
+}
+
+/* --- Responsive ----------------------------------------------- */
+/* --- Correctif 16.10.2026 : en mobile, le champ email et le bouton
+   Join dépassaient de la carte de 16 px. min-width: 0 les laisse
+   rétrécir dans la largeur disponible. ----------------------------- */
+.alta-nl__form,
+.alta-nl__input {
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .alta-nl__card {
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+    gap: 36px;
+  }
+  .alta-ft__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .alta-ft__brand {
+    grid-column: 1 / -1;
+  }
+  .alta-ft__fine {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* --- Séparation avec la section précédente (16.10.2026) ---------
+   Trait fin #1F1F1F en haut de la section, limité à la colonne de
+   760 px et centré. Même trait sur toutes les sections S02 à S10. */
+.alta-nl {
+  position: relative;
+}
+.alta-nl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 760px;
+  height: 1px;
+  background: #1F1F1F;
+}
+</style>
+
+<!-- ── NEWSLETTER ─────────────────────────────────────────── -->
+<section class="alta-nl">
+  <div class="alta-nl__inner">
+    <div class="alta-nl__card">
+
+      <!-- Left: editorial copy -->
+      <div>
+        <span class="alta-nl__eyebrow">Join the Alta Circle</span>
+        <h2 class="alta-nl__h2">One letter, every other Sunday.</h2>
+        <p class="alta-nl__p">
+          The Long Game, written long. A piece of editorial each fortnight —
+          nothing about hacks, nothing about performance. Just the second half
+          of life, taken seriously.
+        </p>
+      </div>
+
+      <!-- Right: form -->
+      <div class="alta-nl__form">
+        <form class="alta-nl__row" action="#" method="post">
+          <input
+            class="alta-nl__input"
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          >
+          <button class="alta-nl__btn" type="submit">Join</button>
+        </form>
+        <p class="alta-nl__help">
+          No advertising. No referrals. Unsubscribe in one click —
+          and you will not be chased.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────── -->
+<footer class="alta-ft">
+  <div class="alta-ft__inner">
+
+    <!-- Four-column grid -->
+    <div class="alta-ft__grid">
+
+      <!-- Col 1: Brand -->
+      <div class="alta-ft__brand">
+        <div class="alta-ft__wordmark">
+          <span class="alta-ft__glyph">△</span>
+          <span class="alta-ft__name">ALTA<span class="alta-ft__star">★</span>MALE LAB</span>
+        </div>
+        <div class="alta-ft__tagline">The Long Game for Men 40+</div>
+      </div>
+
+      <!-- Col 2: Journal -->
+      <div>
+        <span class="alta-ft__col-head">Journal</span>
+        <a href="#" class="alta-ft__link">Metabolic Health</a>
+        <a href="#" class="alta-ft__link">Strength &amp; Movement</a>
+        <a href="#" class="alta-ft__link">Mind &amp; Consciousness</a>
+        <a href="#" class="alta-ft__link">Nervous System &amp; Energy</a>
+        <a href="#" class="alta-ft__link">Masculinity &amp; Life</a>
+      </div>
+
+      <!-- Col 3: ALTA -->
+      <div>
+        <span class="alta-ft__col-head">Alta</span>
+        <a href="#" class="alta-ft__link">The Framework</a>
+        <a href="#" class="alta-ft__link">Manifesto</a>
+        <a href="#" class="alta-ft__link">Editorial line</a>
+        <a href="#" class="alta-ft__link">About</a>
+        <a href="#" class="alta-ft__link">Press</a>
+      </div>
+
+      <!-- Col 4: Connect -->
+      <div>
+        <span class="alta-ft__col-head">Connect</span>
+        <a href="#" class="alta-ft__link">Newsletter</a>
+        <a href="#" class="alta-ft__link">Academy</a>
+        <a href="#" class="alta-ft__link">LinkedIn</a>
+        <a href="#" class="alta-ft__link">RSS</a>
+        <a href="#" class="alta-ft__link">Contact</a>
+      </div>
+
+    </div>
+
+    <!-- Fine print -->
+    <div class="alta-ft__fine">
+      <div class="alta-ft__copyright">© Alta Male Media 2026 · ALTA MALE LAB</div>
+      <div class="alta-ft__closer">Play The Long Game.</div>
+    </div>
+
+  </div>
+</footer>
+
+</div>
+</body></html>
