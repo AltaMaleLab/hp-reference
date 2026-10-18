@@ -134,6 +134,23 @@
   height: 1px;
   background: #1F1F1F;
 }
+
+/* --- Protection contre les styles Divi (18.10.2026) -------------
+   Divi ajoute sa propre puce et une marge aux listes : on les retire
+   pour ne garder que le point or du design. */
+.alta-founder ul.alta-founder__list {
+  list-style: none !important;
+  margin: 0 0 32px !important;
+  padding: 0 !important;
+}
+.alta-founder ul.alta-founder__list li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 0 0 22px !important;
+}
+.alta-founder ul.alta-founder__list li::marker {
+  content: "" !important;
+}
 </style>
 
 <section class="alta-founder">
