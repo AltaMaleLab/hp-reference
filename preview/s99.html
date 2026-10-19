@@ -1,19 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Preview S99</title>
+<style>@font-face{font-family:'Gaoel';src:url('../assets/gaoel.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}html,body{margin:0;padding:0;background:#000000;}</style>
+</head><body>
+<!-- Simulates the Divi section: black background, padding 0, one Code Module containing the file below, unchanged. -->
+<div class="divi-section">
 <!-- ============================================================
-     ALTA MALE LAB — Section 10: Newsletter + Footer
-     Divi Code Module — standalone block
+     ALTA MALE LAB — Footer global (toutes les pages)
+     Divi Code Module — Theme Builder Divi → Global Footer
+     19.10.2026 : séparé de la section 10 (newsletter).
 
      SETUP NOTES:
-     1. Place this in a Divi Code Module inside a Section
-        with Background Color: #000000.
-     2. Set the Divi Section padding to 0 — this block
-        manages its own spacing throughout.
-     3. Wire the form action on .alta-nl__form to your
-        email service provider (Mailchimp, ConvertKit, etc).
-     4. The △ glyph in the footer wordmark is a plain Unicode
-        character — no image dependency.
+     1. Theme Builder Divi → Global Footer : une section, une
+        ligne, une colonne, un seul module Code avec ce fichier.
+        Couleur de fond de la section #0A0A0A, marges intérieures 0.
+     2. Le logo est en Gaoel : la police est intégrée ci-dessous
+        (lettres uniquement), rien à installer.
+     3. Les liens "#" sont provisoires : à remplacer par les vraies
+        URLs quand les pages existeront.
      ============================================================ -->
 
 <style>
+/* --- Font load (remove if already in theme) ------------------- */
 /* --- Font load (remove if already in theme) ------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
 
@@ -30,128 +40,14 @@
   unicode-range: U+0020, U+0041-005A, U+0061-007A, U+00B7;
 }
 
+
 /* --- Reset for this block ------------------------------------- */
-.alta-nl *,
-.alta-nl *::before,
-.alta-nl *::after,
 .alta-ft *,
 .alta-ft *::before,
 .alta-ft *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-/* ============================================================
-   NEWSLETTER
-   ============================================================ */
-
-.alta-nl {
-  background: #000000;
-  padding: 120px 24px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.alta-nl__inner {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-/* --- Newsletter card: two columns ----------------------------- */
-.alta-nl__card {
-  border: 1px solid #1F1F1F;
-  padding: 64px 56px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: center;
-}
-
-/* --- Left: editorial copy ------------------------------------- */
-.alta-nl__eyebrow {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: #EDEDED;
-  display: block;
-  margin-bottom: 18px;
-  line-height: 1;
-}
-
-.alta-nl__h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  color: #EDEDED;
-  margin-bottom: 16px;
-  text-wrap: balance;
-}
-
-.alta-nl__p {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.65;
-  color: #B8B8B8;
-}
-
-/* --- Right: form ---------------------------------------------- */
-.alta-nl__form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.alta-nl__row {
-  display: flex;
-}
-
-.alta-nl__input {
-  flex: 1;
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  color: #EDEDED;
-  background: transparent;
-  border: 1px solid #2A2A2A;
-  border-right: none;
-  padding: 15px 18px;
-  outline: none;
-  border-radius: 0;
-  -webkit-appearance: none;
-}
-
-.alta-nl__input::placeholder {
-  color: #5A5A5A;
-}
-
-.alta-nl__btn {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 0 28px;
-  background: transparent;
-  color: #C8B568;
-  border: 1px solid #C8B568;
-  border-radius: 0;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-appearance: none;
-}
-
-.alta-nl__help {
-  font-family: 'Lato', sans-serif;
-  font-size: 12px;
-  color: #8A8A8A;
-  line-height: 1.55;
 }
 
 /* ============================================================
@@ -287,20 +183,7 @@
 }
 
 /* --- Responsive ----------------------------------------------- */
-/* --- Correctif 16.10.2026 : en mobile, le champ email et le bouton
-   Join dépassaient de la carte de 16 px. min-width: 0 les laisse
-   rétrécir dans la largeur disponible. ----------------------------- */
-.alta-nl__form,
-.alta-nl__input {
-  min-width: 0;
-}
-
 @media (max-width: 640px) {
-  .alta-nl__card {
-    grid-template-columns: 1fr;
-    padding: 40px 28px;
-    gap: 36px;
-  }
   .alta-ft__grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
@@ -314,114 +197,7 @@
     gap: 12px;
   }
 }
-
-/* --- Séparation avec la section précédente (16.10.2026) ---------
-   Trait fin #1F1F1F en haut de la section, limité à la colonne de
-   760 px et centré. Même trait sur toutes les sections S02 à S10. */
-.alta-nl {
-  position: relative;
-}
-.alta-nl::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 48px);
-  max-width: 760px;
-  height: 1px;
-  background: #1F1F1F;
-}
-
-/* --- Protection contre les styles Divi (18.10.2026) -------------
-   Divi donne aux champs de formulaire un fond blanc, un texte gris
-   foncé et ses propres marges : on rétablit le champ du design
-   (fond noir, bordure #2A2A2A, même hauteur que le bouton Join). */
-.alta-nl form.alta-nl__row {
-  display: flex !important;
-  align-items: stretch !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.alta-nl input.alta-nl__input,
-.alta-nl input.alta-nl__input:focus {
-  background: transparent !important;
-  background-color: transparent !important;
-  color: #EDEDED !important;
-  font-family: 'Lato', sans-serif !important;
-  font-size: 15px !important;
-  line-height: 1.2 !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 15px 18px !important;
-  border: 1px solid #2A2A2A !important;
-  border-right: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  outline: none !important;
-  -webkit-appearance: none !important;
-  appearance: none !important;
-}
-.alta-nl input.alta-nl__input::placeholder {
-  color: #5A5A5A !important;
-  opacity: 1 !important;
-}
-.alta-nl input.alta-nl__input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 100px #000000 inset !important;
-  -webkit-text-fill-color: #EDEDED !important;
-}
-.alta-nl button.alta-nl__btn {
-  margin: 0 !important;
-  padding: 0 28px !important;
-  background: transparent !important;
-  color: #C8B568 !important;
-  border: 1px solid #C8B568 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
 </style>
-
-<!-- ── NEWSLETTER ─────────────────────────────────────────── -->
-<section class="alta-nl">
-  <div class="alta-nl__inner">
-    <div class="alta-nl__card">
-
-      <!-- Left: editorial copy -->
-      <div>
-        <span class="alta-nl__eyebrow">Join the Alta Circle</span>
-        <h2 class="alta-nl__h2">One letter, every other Sunday.</h2>
-        <p class="alta-nl__p">
-          The Long Game, written long. A piece of editorial each fortnight —
-          nothing about hacks, nothing about performance. Just the second half
-          of life, taken seriously.
-        </p>
-      </div>
-
-      <!-- Right: form -->
-      <div class="alta-nl__form">
-        <form class="alta-nl__row" action="#" method="post">
-          <input
-            class="alta-nl__input"
-            type="email"
-            name="email"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-          >
-          <button class="alta-nl__btn" type="submit">Join</button>
-        </form>
-        <p class="alta-nl__help">
-          No advertising. No referrals. Unsubscribe in one click —
-          and you will not be chased.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- ── FOOTER ─────────────────────────────────────────────── -->
 <footer class="alta-ft">
@@ -479,3 +255,6 @@
 
   </div>
 </footer>
+
+</div>
+</body></html>

@@ -125,7 +125,7 @@ strong{color:var(--fg-1);font-weight:700}
   <div class="wrap">
     <span class="eyebrow">Référence d'intégration</span>
     <h1>Homepage ALTA MALE LAB — rendu attendu et méthode Divi.</h1>
-    <p class="lede">Cette page montre l'en-tête du site et les 10 sections de la homepage telles qu'elles doivent apparaître sur le site, en desktop et en mobile. Chaque aperçu est produit par le fichier exact à intégrer : ce que tu vois ici, c'est ce que le fichier donne une fois collé.</p>
+    <p class="lede">Cette page montre l'en-tête du site, les 10 sections de la homepage et le footer global telles qu'elles doivent apparaître sur le site, en desktop et en mobile. Chaque aperçu est produit par le fichier exact à intégrer : ce que tu vois ici, c'est ce que le fichier donne une fois collé.</p>
     <p>Elle remplace le prototype Claude Design (qui demandait un compte) et la page « Design System » de mai. Les fichiers sont les mêmes que dans le K-Drive, dossier <code>02_HOMEPAGE_CODE</code> (README v1.1).</p>
   </div>
 </section>
@@ -152,8 +152,9 @@ strong{color:var(--fg-1);font-weight:700}
       <tr><th>Ligne (Row)</th><td>Largeur <code>100%</code>, largeur max <code>100%</code>, marges intérieures <code>0px</code>, gouttière <code>1</code>. Le fichier centre lui-même son contenu sur 760 px.</td></tr>
       <tr><th>Colonne</th><td>Une seule colonne, marges intérieures <code>0px</code>.</td></tr>
       <tr><th>Module</th><td>Un seul module <strong>Code</strong>, marges <code>0px</code>. Coller le fichier complet, de <code>&lt;!--</code> jusqu'à la dernière balise.</td></tr>
-      <tr><th>Police Gaoel</th><td>Gaoel sert uniquement au logo. Elle est déjà intégrée dans l'en-tête (S00) et dans le footer (S10) : rien à installer. Jamais Gaoel pour les titres ou le texte. (Fichier <a href="assets/gaoel.woff2" download>gaoel.woff2</a> disponible si besoin ailleurs.)</td></tr>
+      <tr><th>Police Gaoel</th><td>Gaoel sert uniquement au logo. Elle est déjà intégrée dans l'en-tête (S00) et dans le footer global (S99) : rien à installer. Jamais Gaoel pour les titres ou le texte. (Fichier <a href="assets/gaoel.woff2" download>gaoel.woff2</a> disponible si besoin ailleurs.)</td></tr>
       <tr><th>En-tête (S00)</th><td>Dans le <em>Theme Builder</em> Divi → <em>Global Header</em> : une section, une ligne, une colonne, un module Code, mêmes réglages qu'au-dessus.</td></tr>
+      <tr><th>Footer (S99)</th><td>Dans le <em>Theme Builder</em> Divi → <em>Global Footer</em> : une section (fond <code>#0A0A0A</code>), une ligne, une colonne, un module Code, mêmes réglages qu'au-dessus. La newsletter (S10) reste dans la homepage.</td></tr>
       <tr><th>Hero (S01)</th><td>Même chose, plus : photo B&amp;W en <em>Background Image</em> de la section (Center Right, Cover). Le bloc fait lui-même 100 % de la hauteur de l'écran.</td></tr>
     </table>
     <h4>Coller sans abîmer le code</h4>
@@ -199,10 +200,10 @@ strong{color:var(--fg-1);font-weight:700}
 
 <section class="block" style="border-bottom:0;padding-bottom:40px">
   <div class="wrap">
-    <span class="eyebrow">04 — En-tête + 10 sections</span>
+    <span class="eyebrow">04 — En-tête, 10 sections, footer</span>
     <h2>Rendu attendu, section par section.</h2>
     <p>En desktop, l'aperçu est la largeur réelle de 1440 px réduite pour tenir dans la page. En mobile, il est à taille réelle (390 px). Dans l'aperçu du hero, la photo est posée comme sur le site : en image de fond de la section Divi, et non dans le code.</p>
-    <ul class="toc"><li><a href="#s00"><span>S00</span>En-tête du site (logo, menu, langues)</a></li><li><a href="#s01"><span>S01</span>The Long Game — Hero</a></li><li><a href="#s02"><span>S02</span>Beyond Alpha</a></li><li><a href="#s03"><span>S03</span>The Metabolic Upgrade Quiz</a></li><li><a href="#s04"><span>S04</span>The Alta Framework</a></li><li><a href="#s05"><span>S05</span>Featured Article</a></li><li><a href="#s06"><span>S06</span>Latest Articles</a></li><li><a href="#s07"><span>S07</span>The Long Game Starts at 40</a></li><li><a href="#s08"><span>S08</span>A Note from the Founder</a></li><li><a href="#s09"><span>S09</span>From Knowledge to Transformation</a></li><li><a href="#s10"><span>S10</span>Join the Alta Circle + Footer</a></li></ul>
+    <ul class="toc"><li><a href="#s00"><span>S00</span>En-tête du site (logo, menu, langues)</a></li><li><a href="#s01"><span>S01</span>The Long Game — Hero</a></li><li><a href="#s02"><span>S02</span>Beyond Alpha</a></li><li><a href="#s03"><span>S03</span>The Metabolic Upgrade Quiz</a></li><li><a href="#s04"><span>S04</span>The Alta Framework</a></li><li><a href="#s05"><span>S05</span>Featured Article</a></li><li><a href="#s06"><span>S06</span>Latest Articles</a></li><li><a href="#s07"><span>S07</span>The Long Game Starts at 40</a></li><li><a href="#s08"><span>S08</span>A Note from the Founder</a></li><li><a href="#s09"><span>S09</span>From Knowledge to Transformation</a></li><li><a href="#s10"><span>S10</span>Join the Alta Circle (newsletter)</a></li><li><a href="#s99"><span>S99</span>Footer global (toutes les pages)</a></li></ul>
   </div>
 </section>
 
@@ -502,8 +503,8 @@ strong{color:var(--fg-1);font-weight:700}
   <header class="sec__head">
     <div class="sec__num">S10</div>
     <div>
-      <h3 class="sec__title">Join the Alta Circle + Footer</h3>
-      <div class="sec__file"><code>section-10-newsletter-footer.html</code> <span class="tag tag--live">Section vivante</span></div>
+      <h3 class="sec__title">Join the Alta Circle (newsletter)</h3>
+      <div class="sec__file"><code>section-10-newsletter.html</code> <span class="tag tag--live">Section vivante</span></div>
     </div>
   </header>
   <div class="frame frame--desk" data-w="1440">
@@ -517,10 +518,39 @@ strong{color:var(--fg-1);font-weight:700}
     </div>
     <div class="sec__side">
       <h4 class="side__h">À vérifier</h4>
-      <ul class="side__list"><li>Newsletter et footer dans le même module Code.</li><li>Formulaire : à relier plus tard à l'outil d'emailing (attribut <code>action</code> du <code>&lt;form&gt;</code>).</li><li>Copyright exact : « © Alta Male Media 2026 · ALTA MALE LAB ».</li></ul>
+      <ul class="side__list"><li>Homepage uniquement. Le footer n'est plus dans ce fichier : il est devenu un footer global (S99).</li><li>Formulaire : à relier plus tard à l'outil d'emailing (attribut <code>action</code> du <code>&lt;form&gt;</code>).</li><li>Champ email : fond noir, bordure fine, même hauteur que le bouton JOIN (protégé contre les styles Divi).</li></ul>
       <div class="side__actions">
-        <button class="btn" type="button" data-copy="code/section-10-newsletter-footer.html">Copier le code</button>
-        <a class="btn btn--quiet" href="code/section-10-newsletter-footer.html" download>Télécharger le fichier</a>
+        <button class="btn" type="button" data-copy="code/section-10-newsletter.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-10-newsletter.html" download>Télécharger le fichier</a>
+      </div>
+      <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
+    </div>
+  </div>
+</article>
+
+<article class="sec" id="s99">
+  <header class="sec__head">
+    <div class="sec__num">S99</div>
+    <div>
+      <h3 class="sec__title">Footer global (toutes les pages)</h3>
+      <div class="sec__file"><code>section-99-footer.html</code> <span class="tag">Section fixe</span></div>
+    </div>
+  </header>
+  <div class="frame frame--desk" data-w="1440">
+    <div class="frame__label">Desktop · 1440 px</div>
+    <div class="frame__box"><iframe src="preview/s99.html" title="S99 desktop" scrolling="no"></iframe></div>
+  </div>
+  <div class="sec__row">
+    <div class="frame frame--mob" data-w="390">
+      <div class="frame__label">Mobile · 390 px</div>
+      <div class="frame__box"><iframe src="preview/s99.html" title="S99 mobile" scrolling="no"></iframe></div>
+    </div>
+    <div class="sec__side">
+      <h4 class="side__h">À vérifier</h4>
+      <ul class="side__list"><li>À placer dans le <em>Theme Builder</em> Divi → <em>Global Footer</em>, dans un seul module Code : il apparaît ainsi sur toutes les pages et se modifie à un seul endroit.</li><li>Logo △ ALTA ★ MALE LAB en Gaoel (police déjà intégrée dans le fichier), en or.</li><li>Trois colonnes de liens (Journal, Alta, Connect), liens provisoires à remplacer par les vraies URLs plus tard.</li><li>Copyright exact : « © Alta Male Media 2026 · ALTA MALE LAB ». À mettre à jour chaque année, ici seulement.</li></ul>
+      <div class="side__actions">
+        <button class="btn" type="button" data-copy="code/section-99-footer.html">Copier le code</button>
+        <a class="btn btn--quiet" href="code/section-99-footer.html" download>Télécharger le fichier</a>
       </div>
       <p class="side__hint">Le code copié est le fichier exact, sans aucune modification. Colle-le tel quel dans un seul module Code.</p>
     </div>
